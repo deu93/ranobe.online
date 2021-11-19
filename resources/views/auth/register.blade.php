@@ -4,6 +4,7 @@
 <div class="login_page">
     <div class="register_block">
         <h2>Создайте аккаунт</h2>
+        
         <form action="{{ url('register') }}" method="POST">
             @csrf
             <div class="auth_item">

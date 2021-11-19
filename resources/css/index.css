@@ -1,0 +1,879 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+  background-color: #0E0E0E;
+  
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.container {
+  display: flex;
+  border-radius: 10px;
+  width: 1200px;
+  color: rgba(255, 255, 255, 0.787);
+  margin-top: 14px;
+  background-color: #2a2a2a;
+}
+
+
+.view {
+  width: 850px;
+  background-color: #1d1d1d; 
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.left_side_content  {
+  border:1px solid  rgba(167, 166, 166, 0.226);
+  
+}
+.inner_content{
+  
+}
+.view_button {
+  display: flex;
+  height: 80px;
+  justify-content: start;
+  
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.view_change1 {
+  padding: 5px 10px;
+  background-color: #fb8c00;
+}
+.content {
+  
+  text-decoration: none;
+  display: flex;
+  
+}
+.middle_column {
+  display: flex;
+}
+
+.middle_column_content {
+  padding-left: 15px;
+  display: flex;
+  margin-bottom: 30px;
+  
+  
+}
+.left_content {
+  width: 200px;
+  
+}
+.left_content_img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.left_content_link {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 65px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+
+.left_content_link:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+
+
+.right_content {
+  margin-left: 30px;
+  width: 570px;
+  
+}
+ a {
+  text-decoration: none;
+  
+}
+
+.right_content h2  {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.right_content h4 {
+  color: rgba(13, 155, 13, 0.89);
+  padding: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  
+}
+.last_chapter {
+  color: rgba(13, 155, 13, 0.89);
+  border: 1px solid rgba(13, 155, 13, 0.89);
+  display: inline-block;
+  margin: 10px 0px;
+}
+
+.book_description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+.section_likes {
+  display: flex;
+  justify-content: space-between;
+}
+.last_update {
+  color: rgba(13, 155, 13, 0.89);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.likes {
+  display: flex;
+  justify-content: end;
+}
+.likes button {
+  font-family: inherit;
+  border: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.btn_like svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgba(13, 155, 13, 0.89);
+  width: 25px;
+  height: 25px;
+  
+}
+.btn_dislike svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgb(167, 2, 2);
+  width: 25px;
+  height: 25px;
+  
+}
+.likes p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 5px;
+  color:rgb(201, 202, 202);
+}
+.book_description {
+  height: 150px;
+}
+.likes_count {
+  margin-right: 5px;
+}
+.dislikes_count {
+  padding-right: 10px;
+}
+
+
+
+.sticky_column {
+  width: 80px;
+}
+.logo {
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+  
+}
+.logo img {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 70px;
+  height: 60px;
+  
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.menu button {
+  font-family: inherit;
+  border: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.auth button {
+  font-family: inherit;
+  border: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  
+  
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.search a {
+  font-family: inherit;
+  border: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  margin: 20px 0px;
+}
+.search svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: rgba(141, 141, 141, 0.89);
+  width: 30px;
+  height: 30px;
+  
+}
+.right_side {
+  width: 250px;
+  background-color: #2a2a2a;
+  
+  
+}
+
+
+.footer {
+  padding-top: 15px;
+  padding-left: 15px;
+  color: #a0dcff;
+  font-family: 'Montserrat', sans-serif;
+  border-left: 1px solid  rgba(167, 166, 166, 0.226);
+  border-top: 1px solid  rgba(167, 166, 166, 0.226);
+}
+
+.footer a {
+  outline: none;
+  text-decoration: none;
+  color: #a0dcff;
+  padding-left: 3px;
+  font-size: 14px;
+}
+
+.footer_social {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social_links {
+  padding-right: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.social_links a {
+  font-size: 18px;
+}
+
+.footer_left_side {
+  width: 840px;
+}
+
+/* Кнопка выпадающего списка */
+.dropbtn {
+  
+  background-color: #3498DB;
+  color: rgba(141, 141, 141, 0.89);
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Кнопка выпадающего меню при наведении и фокусировке */
+.dropbtn:hover, .dropbtn:focus {
+  
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: 60px;
+  background-color: #111111;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: rgba(255, 255, 255, 0.787);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: rgb(29, 29, 29);
+  color: #fd961f;
+}
+
+/* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
+.show {display:block;}
+
+.auth-dropbtn {
+  background-color: #3498DB;
+  color: rgba(141, 141, 141, 0.89);
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+.auth-dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+.dropdown-content-auth {
+  display: none;
+  position: absolute;
+  margin-left: 60px;
+  background-color: #111111;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content-auth a {
+  color: rgba(255, 255, 255, 0.787);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content-auth a:hover {background-color: rgb(29, 29, 29);
+  color: #fd961f;
+}
+
+
+.upbtn {
+  opacity: 0.8;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: -80px;
+  left: 120px;
+  cursor: pointer;
+  
+  transition: all .7s ease-in-out;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #2a2a2a;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzMy45NjgsMjc4LjY1N0wyNDguMzg3LDkyLjc5Yy03LjQxOS03LjA0NC0xNi4wOC0xMC41NjYtMjUuOTc3LTEwLjU2NmMtMTAuMDg4LDAtMTguNjUyLDMuNTIxLTI1LjY5NywxMC41NjYgICBMMTAuODQ4LDI3OC42NTdDMy42MTUsMjg1Ljg4NywwLDI5NC41NDksMCwzMDQuNjM3YzAsMTAuMjgsMy42MTksMTguODQzLDEwLjg0OCwyNS42OTNsMjEuNDExLDIxLjQxMyAgIGM2Ljg1NCw3LjIzLDE1LjQyLDEwLjg1MiwyNS42OTcsMTAuODUyYzEwLjI3OCwwLDE4Ljg0Mi0zLjYyMSwyNS42OTctMTAuODUyTDIyMi40MSwyMTMuMjcxTDM2MS4xNjgsMzUxLjc0ICAgYzYuODQ4LDcuMjI4LDE1LjQxMywxMC44NTIsMjUuNywxMC44NTJjMTAuMDgyLDAsMTguNzQ3LTMuNjI0LDI1Ljk3NS0xMC44NTJsMjEuNDA5LTIxLjQxMiAgIGM3LjA0My03LjA0MywxMC41NjctMTUuNjA4LDEwLjU2Ny0yNS42OTNDNDQ0LjgxOSwyOTQuNTQ1LDQ0MS4yMDUsMjg1Ljg4NCw0MzMuOTY4LDI3OC42NTd6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)
+}
+.upbtn:hover {
+  opacity: 1;
+  background-color: #1d1d1d;
+}
+
+/* description styles */
+
+.view_button h2  {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.view_button a{
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
+.content_left {
+  margin-left: 20px;
+  width: 260px;
+  
+}
+.content_left_img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.content_left_link {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 50px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+
+.content_left_link:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+.content_right_top {
+  display: flex;
+}
+.content_right_leftside {
+  width: 300px;
+  
+}
+.content_right_block {
+  height: 50px;
+  display: flex;
+  margin-bottom: 35px;
+}
+.content_right_block svg {
+  height: 25px;
+  width: 25px;
+  display: block;
+}
+.cont {
+  margin-left: 12px;
+}
+.cont h4 {
+  color: #FFCB9A;
+  padding-bottom: 3px;
+}
+
+.svg_bg {
+  background-color: rgb(75, 75, 75);
+  width: 35px;
+  align-items: center;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  
+}
+
+.ratings {
+  width: 220px;
+  display: flex;
+  justify-content: start;
+}
+.content_right_description {
+  width: 550px;
+  text-align: justify;
+  margin-bottom: 40px;
+  font-size: 14px;
+  
+  font-weight: 400;
+}
+
+.chapters {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  
+  
+  
+  
+}
+.chapters_info {
+  width: 810px;
+  border: 1px solid  rgba(167, 166, 166, 0.226);
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  
+}
+.chapters_list {
+  
+}
+
+.hearder_chapters_list {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+.chapter_block {
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  height: 650px;
+  
+  overflow: scroll;
+  overflow-x: hidden;
+  
+  
+  
+}
+#scroll_bar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f9f9fd;
+}
+
+#scroll_bar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(8, 149, 230);
+  
+}
+
+#scroll_bar::-webkit-scrollbar-track {
+  
+  border-radius: 10px;
+  background-color: #000000;
+}
+.chapter {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px ;
+  border-top: 1px solid  rgba(167, 166, 166, 0.226);
+}
+
+.comments {
+  margin: 50px 20px;
+  
+  
+}
+.comments h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.comment {
+  padding-left: 20px;
+  background-color: #2a2a2a;
+}
+.comment h3 {
+  font-size: 13px;
+}
+.comment small {
+  font-size: 10px;
+}
+.comment p {
+  font-size: 12px;
+  line-height: 1.9;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+.profile_img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+  background-color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.profile_block {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.tab {
+  overflow: hidden;
+  
+  background-color: #1d1d1d;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 0px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.787);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.787);
+  margin-right: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: rgb(8, 149, 230);
+  border-bottom: 1px solid rgb(8, 149, 230);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #1d1d1d;
+  border-bottom: 1px solid rgb(8, 149, 230);
+  color: rgb(8, 149, 230);
+  
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+.about {
+  margin-bottom: 10px;
+}
+
+.login_page {
+  width: 840px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_block h2{
+  padding-bottom: 30px;
+  padding-left: 20px;
+  color: #FFCB9A;
+}
+
+.login_block button {
+  
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 50px;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+  cursor: pointer;
+}
+.login_block button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+
+
+.auth_item {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.auth_item input {
+  border-radius: 5px;
+  background-color: #444444;
+  width: 250px;
+  color: #f9f9fd;
+}
+.auth_item input::placeholder {
+  padding-left: 20px;
+  font-size: 13px;
+  color:#fb8c00;
+  
+  
+}
+.auth_item input:focus {
+  outline: none;
+}
+
+.auth_item_button {
+  margin-left: 70px;
+  margin-top: 25px;
+}
+.search_page {
+  width: 850px;
+  min-height: 550px;
+
+}
+.top_search {
+  height: 120px;
+  width: 850px;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.search_block h3{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: #FFCB9A;
+}
+
+.search_block button {
+  
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 2px 30px;
+  margin-left: 10px;
+  font-size: 14px;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+  cursor: pointer;
+}
+.search_block button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+
+
+
+.search_form input {
+  border-radius: 5px;
+  background-color: #444444;
+  width: 250px;
+  color: #f9f9fd;
+  margin-left: 20px;
+}
+.search_form input::placeholder {
+  padding-left: 20px;
+  font-size: 13px;
+  color:#fb8c00;
+  
+  
+}
+.search_form input:focus {
+  outline: none;
+  padding-left: 10px;
+}
+
+
+
+.search_result {
+  margin-top: 30px;
+}
+.result {
+  margin-bottom: 10px;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+
+.profile_page {
+  width: 850px;
+  min-height: 300px;
+}
+.profile_info_block {
+  
+}
+.profile_name_block {
+  display: flex;
+  justify-content: center;
+  
+}
+.profile_name h3 {
+  padding-top: 2px;
+}
+
+.bookmarks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 850px;
+  
+}
+.bookmars_block_cont {
+  justify-content: center;
+  width: 850px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.content_wanted {
+  width: 850px;
+  display: flex;
+  
+}
+.tab_content_block {
+  margin-right: 20px;
+}
+
+.tab_content_block h4 {
+  font-weight: 14;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+.reader_page {
+  width: 850px;
+  min-height: 600px;
+}

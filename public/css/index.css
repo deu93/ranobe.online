@@ -738,13 +738,12 @@ body{
   color: black;
 }
 .register_block h2{
-  padding-bottom: 30px;
-  padding-left: 0px;
+  padding-bottom: 20px;
+  
   color: #FFCB9A;
 }
 
 .register_block button {
-  
   text-decoration: none;
   color: rgb(8, 149, 230);
   padding: 6px 35px;

@@ -10,6 +10,18 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YG7V8LL5H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7YG7V8LL5H');
+    </script>
+    <title>Ранобэ. Читать ранобэ онлайн на русском. Ранобэ онлайн!</title>
+    <meta name="description" content="Ранобэ, Ранобэ онлайн! У нас всё ранобэ бесплатно и без регистрации! Читать ранобэ! ранобэ на русском языке, переводы ранобэ, популярнае ранобэ!
+"/>
+    <meta name="keywords" content=" ранобэ, ранобэ онлайн, читать ранобэ, читать ранобэ онлайн, ранобэ бесплатно, ранобэ романтика, ранобэ по жанрам, ранобэ про любовь, ранобэ русская, ранобэ на русском, перевод ранобэ, лучшая ранобэ, топ ранобэ, каталог ранобэ, популярная ранобэ
+"/>
     <title>Ranobe.online</title>
 </head>
 <body>

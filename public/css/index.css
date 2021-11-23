@@ -744,6 +744,25 @@ xxl: 1400px */
   background-color: rgb(8, 149, 230);
   color: black;
 }
+.register_block h2{
+  padding-bottom: 20px;
+  
+  color: #FFCB9A;
+}
+
+.register_block button {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 37px;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+  cursor: pointer;
+}
+.register_block button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
 
 
 .auth_item {
@@ -769,6 +788,10 @@ xxl: 1400px */
 
 .auth_item_button {
   margin-left: 70px;
+  margin-top: 25px;
+}
+.reg_item_button {
+  
   margin-top: 25px;
 }
 .search_page {
@@ -883,4 +906,13 @@ xxl: 1400px */
 .reader_page {
   width: 850px;
   min-height: 600px;
+}
+
+.error {
+  border: 2px solid red;
+}
+.error_text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgb(136, 2, 2);
 }

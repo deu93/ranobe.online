@@ -1093,6 +1093,36 @@ xxl: 1400px */
   
 }
 @media(min-width:576px) and (max-width:767px) {
+ 
+  .auth-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .dropdown-content-auth {
+   margin: 0;
+    
+  }
+  .dropdown-content-auth a {
+    color: rgba(255, 255, 255, 0.787);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content-auth a:hover {background-color: rgb(29, 29, 29);
+    color: #fd961f;
+  }
+
+  .dropdown-content {
+    
+    margin: 0;
+    margin-right: 20px;
+    
+    min-width: 100px;
+    
+  }
+
   .container{
     width: 360px;
     display: block;
@@ -1110,7 +1140,7 @@ xxl: 1400px */
   font-weight: 800;
   font-size: 22px;
   margin-bottom: 10px;
-}
+  }
   .last_update {
     font-size: 16px;
     margin-bottom: 10px;
@@ -1123,6 +1153,7 @@ xxl: 1400px */
   }
   .sticky_column {
     display: flex;
+    
     height: 50px;
     width: 360px;
     justify-content: space-between;
@@ -1131,17 +1162,19 @@ xxl: 1400px */
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    
-    border-left:1px solid  rgba(167, 166, 166, 0.226);
     border-right:1px solid  rgba(167, 166, 166, 0.226);
+    border-left:1px solid  rgba(167, 166, 166, 0.226);
   }
   .logo {
     border: none;
+    
   }
   .logo img {
     width: 35px;
     height: 35px;
-    margin-left: 5px;
+    margin-right: 10px;
+    
+    
   }
   .search {
     padding: 7px 16px;
@@ -1227,10 +1260,39 @@ xxl: 1400px */
   .footer_links a {
     font-size: 12px;
   }
-  
 }
 
 @media (min-width:768px) and (max-width:991px) {
+ 
+  .auth-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .dropdown-content-auth {
+   margin: 0;
+    
+  }
+  .dropdown-content-auth a {
+    color: rgba(255, 255, 255, 0.787);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content-auth a:hover {background-color: rgb(29, 29, 29);
+    color: #fd961f;
+  }
+
+  .dropdown-content {
+    
+    margin: 0;
+    margin-right: 20px;
+    
+    min-width: 100px;
+    
+  }
+
   .container{
     width: 360px;
     display: block;
@@ -1261,6 +1323,7 @@ xxl: 1400px */
   }
   .sticky_column {
     display: flex;
+    
     height: 50px;
     width: 360px;
     justify-content: space-between;
@@ -1269,16 +1332,19 @@ xxl: 1400px */
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    
+    border-right:1px solid  rgba(167, 166, 166, 0.226);
     border-left:1px solid  rgba(167, 166, 166, 0.226);
   }
   .logo {
     border: none;
+    
   }
   .logo img {
     width: 35px;
     height: 35px;
-    margin-left: 5px;
+    margin-right: 10px;
+    
+    
   }
   .search {
     padding: 7px 16px;
@@ -1364,9 +1430,38 @@ xxl: 1400px */
   .footer_links a {
     font-size: 12px;
   }
-  
 }
 @media (min-width:992) and (max-width:1199px) {
+  
+  .auth-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .dropdown-content-auth {
+   margin: 0;
+    
+  }
+  .dropdown-content-auth a {
+    color: rgba(255, 255, 255, 0.787);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content-auth a:hover {background-color: rgb(29, 29, 29);
+    color: #fd961f;
+  }
+
+  .dropdown-content {
+    
+    margin: 0;
+    margin-right: 20px;
+    
+    min-width: 100px;
+    
+  }
+
   .container{
     width: 360px;
     display: block;
@@ -1397,6 +1492,7 @@ xxl: 1400px */
   }
   .sticky_column {
     display: flex;
+    
     height: 50px;
     width: 360px;
     justify-content: space-between;
@@ -1405,16 +1501,19 @@ xxl: 1400px */
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    
+    border-right:1px solid  rgba(167, 166, 166, 0.226);
     border-left:1px solid  rgba(167, 166, 166, 0.226);
   }
   .logo {
     border: none;
+    
   }
   .logo img {
     width: 35px;
     height: 35px;
-    margin-left: 5px;
+    margin-right: 10px;
+    
+    
   }
   .search {
     padding: 7px 16px;
@@ -1500,5 +1599,4 @@ xxl: 1400px */
   .footer_links a {
     font-size: 12px;
   }
-  
 }

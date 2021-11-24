@@ -3,7 +3,7 @@
 @section('content')
 <div class="login_page">
     <div class="login_block">
-        <h2>Войти в аккаунт</h2>
+        <h2>Войдите в свой аккаунт</h2>
         <form action="#">
             <div class="auth_item">
                 <input type="email" id="email" placeholder="Введите email">

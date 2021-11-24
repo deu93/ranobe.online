@@ -724,7 +724,9 @@ body{
   padding-left: 20px;
   color: #FFCB9A;
 }
-
+.login_block input {
+  margin-left: 60px;
+}
 .login_block button {
   
   text-decoration: none;
@@ -734,6 +736,7 @@ body{
   border-radius: 5px;
   border: 2px solid rgb(8, 149, 230);
   cursor: pointer;
+  margin-left: 50px;
 }
 .login_block button:hover {
   background-color: rgb(8, 149, 230);

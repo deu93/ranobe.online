@@ -29,19 +29,19 @@
                         <div class="content_wanted">
                             <div class="tab_content_block">
                                 <h4>Культивация Онлайн</h4>
-                                <img src="image.jpg" alt="">
+                                <img src="{{ asset('img/image.jpg') }}" alt="">
                             </div>
                             <div class="tab_content_block">
                                 <h4>Культивация Онлайн</h4>
-                                <img src="image.jpg" alt="">
+                                <img src="{{ asset('img/image.jpg') }}" alt="">
                             </div>
                             <div class="tab_content_block">
                                 <h4>Культивация Онлайн</h4>
-                                <img src="image.jpg" alt="">
+                                <img src="{{ asset('img/image.jpg') }}" alt="">
                             </div>
                             <div class="tab_content_block">
                                 <h4>Культивация Онлайн</h4>
-                                <img src="image.jpg" alt="">
+                                <img src="{{ asset('img/image.jpg') }}" alt="">
                             </div>
                             
                         </div>
@@ -56,7 +56,7 @@
                       <div id="done" class="tabcontent">
                         <div class="tab_content_block">
                             <h4>Культивация Онлайн</h4>
-                            <img src="image (1).webp" alt="">
+                            <img src="{{ asset('img/image (1).jpg') }}" alt="">
                         </div>
                       </div>
                       <div id="abandoned" class="tabcontent">

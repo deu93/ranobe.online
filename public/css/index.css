@@ -1195,7 +1195,7 @@ xxl: 1400px */
   
 }
 
-@media (min-width:768px) and (max-width:991) {
+@media (min-width:768px) and (max-width:991px) {
   .container{
     width: 360px;
     display: block;
@@ -1331,7 +1331,7 @@ xxl: 1400px */
   }
   
 }
-@media (min-width:992) and (max-width:1199) {
+@media (min-width:992) and (max-width:1199px) {
   .container{
     width: 360px;
     display: block;

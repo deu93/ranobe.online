@@ -1059,5 +1059,138 @@ xxl: 1400px */
   
 }
 @media(min-width:576px) and (max-width:767px) {
+  .container{
+    width: 360px;
+    display: block;
+    border-radius: 0px;
+    margin-top: 0px;
+    
+  }
+  .left_content {
+    width: 350px;
+  }
+  .left_content h2 {
+  width: 350px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 10px;
+  }
+  .last_update {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .left_content_img {
+    width: 330px;
+  }
+  .view_button {
+    display: none;
+  }
+  .sticky_column {
+    display: flex;
+    height: 50px;
+    width: 360px;
+    justify-content: space-between;
+  }
+  .sticky_column_cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    
+    border-left:1px solid  rgba(167, 166, 166, 0.226);
+  }
+  .logo {
+    border: none;
+  }
+  .logo img {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+  }
+  .search {
+    padding: 7px 16px;
+  }
+  .search a {
+    margin: 0;
+    padding-top: 5px;
+  }
+  .search svg {
+   
+    width: 25px;
+    height: 25px;
+  }
+  .menu {
+    margin: 0;
+    padding: 7px 10px;
+    border-bottom: none;
+    border-left:1px solid  rgba(167, 166, 166, 0.226);
+  }
+  .menu button {
+    margin: 0;
+  }
+  .auth {
+    padding: 7px 10px;
+    border-left:1px solid  rgba(167, 166, 166, 0.226);
+  }
+  .auth-dropdown {
+    padding: 0;
+  }
+  
+  .container_inner{
+    width: 360px;
+  }
+  .middle_column {
+    display: none;
+  }
+  .inner_content{
+    width: 360px;
+  }
+  .view{
+    width: 360px;
+    
+  }
+  .mobile {
+    display: flex;
+    width: 360px;
+  }
+  .last_chapter {
+    width: 360px;
+    border: none;
+    
+  }
+  .last_chapter a{
+    text-decoration: none;
+  }
+  .last_chapter h4 {
+    color: rgba(13, 155, 13, 0.89);
+    padding: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .left_content_link {
+    padding: 10px 135px;
+  }
+  .section_likes {
+    margin-top: 30px;
+    justify-content: end;
+  }
+  .right_side{
+    display: none;
+  }
+  .right_content{
+    display: none;
+  }
+  .footer_left_side {
+    width: 340px;
+    
+  }
+  .footer_links{
+    margin-bottom: 5px;
+  }
+  .footer_links a {
+    font-size: 12px;
+  }
   
 }

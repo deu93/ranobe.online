@@ -28,7 +28,9 @@
 <section>
     <div class="container">
         <div class="sticky_column">
-            
+            <div class="logo">
+                <a href="/"><img src="{{ asset('img/letter_r_PNG93944.png') }}" alt=""></a>
+            </div>
             <div class="sticky_column_cont">
                 <div class="menu">
                     <div class="dropdown">
@@ -57,9 +59,7 @@
                 </div>
             </div>
             
-            <div class="logo">
-                <a href="/"><img src="{{ asset('img/letter_r_PNG93944.png') }}" alt=""></a>
-            </div>
+            
             
         </div>
         <div class="inner_content">

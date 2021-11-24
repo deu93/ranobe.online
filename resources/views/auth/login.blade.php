@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="add_book_page">
-    <div class="add_book_block">
-        <h2>Добавить книгу</h2>
+<div class="login_page">
+    <div class="login_block">
+        <h2>Войти в аккаунт</h2>
         <form action="#">
             <div class="auth_item">
                 <input type="email" id="email" placeholder="Введите email">

@@ -43,6 +43,7 @@
                          @if (!auth()->user()->role < 2)
                          <a href="{{ url('/add-book') }}">Добавить книгу</a>
                          @endif
+                         <a href="{{ url('/logout') }}">Выйти</a>
                          @endauth
                         </div>
                         

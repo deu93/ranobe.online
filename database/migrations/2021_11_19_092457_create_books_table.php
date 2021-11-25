@@ -23,8 +23,8 @@ class CreateBooksTable extends Migration
             $table->string('slug');
             $table->string('author');
             $table->string('country');
-            $table->integer('likes');
-            $table->integer('dislikes');
+            $table->integer('likes')->default(0);
+            $table->integer('dislikes')->default(0);
             $table->timestamps();
         });
     }

@@ -401,6 +401,7 @@ body{
 /* Выпадающее содержимое (скрыто по умолчанию) */
 .dropdown-content {
   display: none;
+  justify-content: center;
   position: absolute;
   margin-left: 60px;
   background-color: #111111;
@@ -1077,7 +1078,7 @@ body{
   background-color: rgba(255, 255, 255, 0.787);
   padding: 12px 16px;
   width: 100%;
-  color:#f9f9fd;
+  color:#111111;
   text-decoration: none;
   display: block;
 }

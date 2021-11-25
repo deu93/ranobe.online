@@ -85,7 +85,7 @@
                   </div>
 
                   <div id="about" class="tabcontent">
-                    <p class="about"><pre>{{ $book->about }}</pre>
+                    <p class="about"><pre>{{ $book->about->toDateString() }}</pre>
                   </div>
                 
             </div>

@@ -8,9 +8,15 @@
             @csrf
             <div class="auth_item">
                 <input type="email" id="email" placeholder="Введите email">
+                @error('email')
+                    {{ $message }}
+                @enderror
             </div>
             <div class="auth_item">
                 <input type="password" id="password" placeholder="Введите пароль">
+                @error('password')
+                    {{ $message }}
+                @enderror
             </div>
             <div class="auth_item_button">
                 <button type="submit">Войти</button>

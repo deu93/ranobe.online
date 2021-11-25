@@ -56,7 +56,7 @@
                           <a href="/register">Зарегистрироваться</a>
                           <a href="/login">Войти</a>
                           @auth
-                              <a href="{{ url('/profile') }}">{{ auth()->user->name }}</a>
+                              <a href="{{ url('/profile') }}">{{ auth()->user()->name }}</a>
                           @endauth
                         </div>
                       </div>

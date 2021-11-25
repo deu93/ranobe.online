@@ -5,6 +5,7 @@
     <div class="login_block">
         <h2>Войдите в свой аккаунт</h2>
         <form action="{{ url('/login') }}" method="POST">
+            @csrf
             <div class="auth_item">
                 <input type="email" id="email" placeholder="Введите email">
             </div>

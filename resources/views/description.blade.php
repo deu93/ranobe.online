@@ -85,7 +85,7 @@
                   </div>
 
                   <div id="about" class="tabcontent">
-                    <p class="about">{{ $book->likes }}</p>
+                    <p class="about">{{ $book->about }}</p>
                   </div>
                 
             </div>

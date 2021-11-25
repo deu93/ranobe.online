@@ -61,7 +61,7 @@
                               <a href="{{ url('/profile') }}">{{ auth()->user()->name }}</a>
                               <form action="{{ url('/logout') }}" method="POST">
                                   @csrf
-                                  <button type="submit">Выйти</button>
+                                  <button type="submit" class="logout_btn">Выйти</button>
                               </form>
                           @endauth
                         </div>

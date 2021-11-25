@@ -52,7 +52,7 @@
                 <div class="auth">
                     <div class="auth-dropdown">
                         <button onclick="authDropdown()" class="auth-dropbtn btn"><i class="fas fa-user-alt"></i></button>
-                        <div id="authDropdown" class="dropdown-content-auth">
+                        <div id="authDropdown" class="dropdown-content">
                           @guest
                           <a href="{{ url('/login') }}">Войти</a>
                           <a href="{{ url('/register') }}">Зарегистрироваться</a>

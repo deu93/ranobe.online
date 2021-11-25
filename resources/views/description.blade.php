@@ -15,7 +15,7 @@
                     </div>
                     <div class="cont">
                         <h4>Опубликовано: </h4>
-                        <p>{{ $book->created_at }}</p>
+                        <p>{{ $book->created_at->toDateString() }}</p>
                     </div>
                 </div>
                 <div class="content_right_block">
@@ -85,7 +85,7 @@
                   </div>
 
                   <div id="about" class="tabcontent">
-                    <p class="about"><pre>{{ $book->about->toDateString() }}</pre>
+                    <p class="about"><pre>{{ $book->about }}</pre>
                   </div>
                 
             </div>

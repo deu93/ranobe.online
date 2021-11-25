@@ -39,6 +39,9 @@
                           <a href="/all-books">Все книги</a>
                           <a href="/by-genre">По жанрам</a>
                           <a href="/finished">Законченные</a>
+                          @if (!auth()->user()->role < 2)
+                          <a href="{{ url('/add-book') }}">Добавить книгу</a>
+                          @endif
                         </div>
                         
                       </div>

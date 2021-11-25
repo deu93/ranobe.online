@@ -440,7 +440,6 @@ body{
 
 .dropdown-content-auth {
   display: none;
-  justify-content: center;
   position: absolute;
   margin-left: 60px;
   background-color: #111111;

@@ -7,13 +7,13 @@
         <form action="{{ url('/login') }}" method="POST">
             @csrf
             <div class="auth_item">
-                <input type="email" id="email" placeholder="Введите email">
+                <input type="email" id="email" name="email" placeholder="Введите email">
                 @error('email')
                     {{ $message }}
                 @enderror
             </div>
             <div class="auth_item">
-                <input type="password" id="password" placeholder="Введите пароль">
+                <input type="password" name="password" id="password" placeholder="Введите пароль">
                 @error('password')
                     {{ $message }}
                 @enderror

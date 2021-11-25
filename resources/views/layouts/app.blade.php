@@ -59,7 +59,10 @@
                           @endguest
                           @auth
                               <a href="{{ url('/profile') }}">{{ auth()->user()->name }}</a>
-                              <a href="{{ url('/logout') }}">Выйти</a>
+                              <form action="{{ url('/logout') }}" method="POST">
+                                  @csrf
+                                  <button type="submit">Выйти</button>
+                              </form>
                           @endauth
                         </div>
                       </div>

@@ -85,7 +85,7 @@
                   </div>
 
                   <div id="about" class="tabcontent">
-                    <p class="about">{{ $book->about }}</p>
+                    <p class="about"><pre>{{ $book->about }}</pre>
                   </div>
                 
             </div>

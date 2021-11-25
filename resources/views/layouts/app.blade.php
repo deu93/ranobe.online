@@ -53,10 +53,13 @@
                     <div class="auth-dropdown">
                         <button onclick="authDropdown()" class="auth-dropbtn btn"><i class="fas fa-user-alt"></i></button>
                         <div id="authDropdown" class="dropdown-content">
-                          <a href="/register">Зарегистрироваться</a>
-                          <a href="/login">Войти</a>
+                          @guest
+                          <a href="{{ url('/login') }}">Войти</a>
+                          <a href="{{ url('/register') }}">Зарегистрироваться</a>
+                          @endguest
                           @auth
                               <a href="{{ url('/profile') }}">{{ auth()->user()->name }}</a>
+                              <a href="{{ url('/logout') }}">Выйти</a>
                           @endauth
                         </div>
                       </div>

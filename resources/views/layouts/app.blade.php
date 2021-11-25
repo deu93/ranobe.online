@@ -40,10 +40,9 @@
                           <a href="/by-genre">По жанрам</a>
                           <a href="/finished">Законченные</a>
                          @auth
-                         @if (!auth()->user()->role < 2)
-                         <a href="{{ url('/add-book') }}">Добавить книгу</a>
-                         @endif
-                         <a href="{{ url('/logout') }}">Выйти</a>
+                            @if (!auth()->user()->role < 2)
+                            <a href="{{ url('/add-book') }}">Добавить книгу</a>
+                            @endif
                          @endauth
                         </div>
                         
@@ -56,6 +55,9 @@
                         <div id="authDropdown" class="dropdown-content">
                           <a href="/register">Зарегистрироваться</a>
                           <a href="/login">Войти</a>
+                          @auth
+                              <a href="{{ url('/profile') }}">{{ auth()->user->name }}</a>
+                          @endauth
                         </div>
                       </div>
                 </div>

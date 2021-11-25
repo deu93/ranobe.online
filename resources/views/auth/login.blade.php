@@ -4,7 +4,7 @@
 <div class="login_page">
     <div class="login_block">
         <h2>Войдите в свой аккаунт</h2>
-        <form action="#">
+        <form action="{{ url('/login') }}" method="POST">
             <div class="auth_item">
                 <input type="email" id="email" placeholder="Введите email">
             </div>

@@ -412,6 +412,7 @@ body{
 
 /* Ссылки внутри выпадающего списка */
 .dropdown-content a {
+  margin: 0 auto;
   color: rgba(255, 255, 255, 0.787);
   padding: 12px 16px;
   text-decoration: none;
@@ -439,15 +440,7 @@ body{
   padding: 10px;
 }
 
-.dropdown-content-auth {
-  display: none;
-  position: absolute;
-  margin-left: 60px;
-  background-color: #111111;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+
 .dropdown-content-auth a {
   color: rgba(255, 255, 255, 0.787);
   padding: 12px 16px;

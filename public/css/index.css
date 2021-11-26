@@ -1143,6 +1143,12 @@ xxl: 1400px */
   .profile_page1 {
     width: 360px;
   }
+  .bookmars_block_cont {
+    width: 360px;
+  }
+  .content_wanted {
+    width: 340px;
+  }
   .content_right_description {
     width: 330px;
     text-align: justify;

@@ -1136,15 +1136,7 @@ lg: 992px,
 xl: 1200px,
 xxl: 1400px */
 
-#mbl_h {
-  display: none;
-}
-#mbl1 {
-  display: none;
-}
-#mbl2 {
-  display: none;
-}
+
 .mobile1 {
   display: none;
 }

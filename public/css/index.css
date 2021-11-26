@@ -660,6 +660,7 @@ body{
   line-height: 1.9;
   font-weight: 300;
   padding-bottom: 20px;
+  margin-left: 10px;
 }
 .profile_img {
   height: 35px;
@@ -1125,6 +1126,7 @@ body{
   margin-top: 25px;
   margin-left: 10px;
 }
+.comment
 
 /* xs: 0,
 sm: 576px,

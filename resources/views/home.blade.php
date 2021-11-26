@@ -47,7 +47,7 @@
             @endforeach
         </div>
     </div>
-    <div id="mbl" class="mobile">
+    <div class="mobile">
         <div id="content" class="view_change_style standart">
             @foreach ($books as $book)
             <div class="middle_column_content">

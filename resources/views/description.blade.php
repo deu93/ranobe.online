@@ -96,7 +96,7 @@
     </div>
 </div>
 
-<div id="mbl1" class="mobile">
+<div class="mobile">
     <div class="middle_column_content">
         <div class="left_content">
             <a href="{{ url('/book/' . $book->slug) }}">

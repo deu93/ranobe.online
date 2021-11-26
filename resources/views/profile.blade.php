@@ -71,7 +71,7 @@
         </div>
         </div>
 </div>
-<div id="mbl2" class="mobile">
+<div class="mobile">
     <div class="profile_page1">
         <div class="profile_info_block">
             <div class="profile_name_block">

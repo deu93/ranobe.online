@@ -1128,7 +1128,7 @@ body{
   margin-top: 25px;
   margin-left: 10px;
 }
-.comment
+
 
 /* xs: 0,
 sm: 576px,
@@ -1138,8 +1138,9 @@ xl: 1200px,
 xxl: 1400px */
 
 
-.mobile1 {
+.mobile {
   display: none;
+  width: 850px;
 }
 @media (max-width:575px) {
   .profile_page {

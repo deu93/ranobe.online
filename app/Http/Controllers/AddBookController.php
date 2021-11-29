@@ -69,7 +69,7 @@ class AddBookController extends Controller
                 }
                 $bookGenre->save();
             }
-            return redirect('/')->with('status', 'Книга добавлена!');
+            return redirect('/authors-panel')->with('status', 'Книга добавлена!');
 
         }
     }

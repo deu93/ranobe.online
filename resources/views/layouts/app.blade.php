@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YG7V8LL5H"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -40,9 +41,6 @@
                           <a href="/by-genre">По жанрам</a>
                           <a href="/finished">Законченные</a>
                          @auth
-                            @if (!auth()->user()->role < 2)
-                            <a href="{{ url('/add-book') }}">Добавить книгу</a>
-                            @endif
                          @endauth
                         </div>
                         
@@ -60,6 +58,9 @@
                               @endguest
                               @auth
                                   <a href="{{ url('/profile') }}">{{ auth()->user()->name }}</a>
+                                  @if (auth()->user()->role > 1)
+                                  <a href="{{ url('/authors-panel') }}">Панель автора</a>
+                                  @endif
                                   <form action="{{ url('/logout') }}" method="POST">
                                       @csrf
                                       <div class="logout_btn">

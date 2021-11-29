@@ -20,8 +20,11 @@
                             </h4>
                         </a>
                     </div>
+                    @php
+                        $shortDescription = Str::limit($book->description, 250, '...')
+                    @endphp
                     <p class="book_description">
-                       {{ $book->description }}
+                       {{ $shortDescription }}
                     </p>  
                     <div class="section_likes">
                         <p class="last_update">
@@ -45,6 +48,7 @@
                 </div>
             </div>
             @endforeach
+            {{-- $books->links('vendor.pagination.custom') --}}
         </div>
     </div>
     <div class="mobile">

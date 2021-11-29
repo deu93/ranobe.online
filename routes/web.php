@@ -1,10 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddBookController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AuthorsPanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,4 @@ Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/add-book', [AddBookController::class, 'index']);
 Route::post('/add-book', [AddBookController::class, 'store']);
 Route::get('/book/{slug}', [BookController::class, 'index']);
+Route::get('/authors-panel', [AuthorsPanelController::class, 'index']);

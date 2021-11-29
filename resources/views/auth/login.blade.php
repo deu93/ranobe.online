@@ -9,13 +9,13 @@
             <div class="auth_item">
                 <input type="email" id="email" name="email" placeholder="Введите email">
                 @error('email')
-                    {{ $message }}
+                <h4>Введите корректные данные!</h4>
                 @enderror
             </div>
             <div class="auth_item">
                 <input type="password" name="password" id="password" placeholder="Введите пароль">
                 @error('password')
-                    {{ $message }}
+                <h4>Введите корректные данные!</h4>
                 @enderror
             </div>
             <div class="auth_item_button">

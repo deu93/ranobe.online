@@ -1114,11 +1114,13 @@ body{
 }
 .logout_btn button{
   background-color: #111111;
-  padding: 12px 16px;
+  
+  
   width: 100%;
   color:rgba(255, 255, 255, 0.787);
   text-decoration: none;
-  display: block;
+  padding: 12px 16px;
+  display: flex;
 }
 .logout_btn button:hover {
   background-color: rgb(29, 29, 29);
@@ -1129,7 +1131,54 @@ body{
   margin-left: 10px;
 }
 
+.authors_panel {
+  width: 850px;
+  min-height: 300px;
+  
+}
+.authors_panel_block {
+  
+  
+}
+.books_h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.authors_books_show {
+  
+}
+.book_show_block {
+  
+  
+}
+.books_block_display{
+  display: flex;
+  justify-content: center;
+}
+.book_links {
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 20px;
+}
+.pager {
+  color: #3498DB;
+  display: flex;
+}
+.pager li {
+  margin-right: 10px;
+  
+}
+.pagination {
+  color: #fd961f;
+}
 
+
+.book_show {
+  overflow:hidden;
+  width: 250px;
+}
 /* xs: 0,
 sm: 576px,
 md: 768px,

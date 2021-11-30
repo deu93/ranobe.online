@@ -169,7 +169,7 @@
            <div id="scroll_bar" class="chapter_block">
            @foreach ($chapters as $chapter )
                <div class="chapter">
-                    <a href="">{{ $chapter->title }}</a>
+                    <a href="{{url('/'.$book->slug.'/'.$chapter->slug)}}">{{ $chapter->chapter_name }}</a>
                 </div>
            @endforeach
             

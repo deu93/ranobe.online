@@ -15,7 +15,8 @@ class ChapterController extends Controller
     }
 
     public function index($slug) {
-        $book = Book::find($slug);
+        $book = Book::where('slug', $slug)->first();
+        
         if ((auth()->user()->role == 2 and auth()->user()->id == $book->user_id) or auth()->user()->role > 2 ) {
             return view('add-chapter', [
                 'book' => $book
@@ -34,7 +35,7 @@ class ChapterController extends Controller
             ]);
 
 
-            $book = Book::find($slug);
+            $book = Book::where('slug', $slug)->first();;
             $chapter = new Chapter();
 
             $chapter->chapter_name = $request->chapter_name;
@@ -42,8 +43,7 @@ class ChapterController extends Controller
             $chapter->book_id = $book->id;
             $chapter->slug = Str::slug($request->chapter_name);
             $chapter->save();
-            dd($chapter);
-            return redirect('/authors-panel')->with('status', 'Глава  успешно');
+            return redirect()->back()->with('status', 'Глава успешно добавлена');
          }
         
          

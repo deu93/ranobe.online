@@ -3,14 +3,15 @@
 @section('content')
 <div class="authors_panel_page">
     <div class="authors_panel_block">
-        <h2>Панель автора</h2>
-        
+        <div class="books_h4">
+            <h2>Панель автора</h2>
+        </div>
         <div class="authors-books">
-            <div class="book-add">
+            <div class="book_add">
                 <a href="{{ url('/add-book') }}">Добавить книгу</a>
             </div>
             <div class="authors_books_show">
-                <div class="books_h2">
+                <div class="books_h4">
                     <h4>Ваши книги:</h4>
                 </div>
                 <div class="book_show_block">
@@ -19,13 +20,15 @@
                             @foreach ($books as $book)
                             <div class="book_show">
                                 @php
-                                    $shortTitle = Str::limit($book->title, 25, '...')
+                                    $shortTitle = Str::limit($book->title, 20, '...')
                                 @endphp
                                 <h5>{{ $shortTitle }}</h5>
                                 <img src="{{ asset('img/books/' . $book->image) }}" alt="kartinka">
-                                <a href="#">Редактировать</a>
-                                <a href="#">Добавить главу</a>
-                                <a href="#">Удалить книгу</a>
+                                <div class="book_link_block">
+                                    <a href="#">Редактировать</a>
+                                    <a href="#">Добавить главу</a>
+                                    <a  href="#">Удалить книгу</a>
+                                </div>
                             </div>
                         @endforeach</div>
                         <div class="book_links">

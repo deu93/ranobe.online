@@ -3,7 +3,7 @@
 <div class="add_book_page">
     <div class="add_chapter_block">
         <h2>Добавить главу</h2>
-        <form action="{{ url('/add-chapter') }}" method="POST">
+        <form action="{{ url('/add-chapter/'. $book->slug) }}" method="POST">
             @csrf
             <div class="add_chapter_item">
                 <input type="text" name="chapter_name" id="chapter_name" placeholder="Название книги" value="">

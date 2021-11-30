@@ -6,7 +6,7 @@
         <form action="{{ url('/add-chapter/'. $book->slug) }}" method="POST">
             @csrf
             <div class="add_chapter_item">
-                <input type="text" name="chapter_name" id="chapter_name" placeholder="Название книги" value="">
+                <input type="text" name="chapter_name" id="chapter_name" placeholder="Название главы" value="">
             </div>
             <div class="add_chapter_item">
                 <textarea  name="chapter_text" id="editor"  placeholder="Описание"></textarea>

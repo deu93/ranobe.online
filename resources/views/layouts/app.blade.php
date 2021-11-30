@@ -13,11 +13,9 @@
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YG7V8LL5H"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7YG7V8LL5H');
-    </script>
+    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"
+type="text/javascript" charset="utf-8" ></script>
+ 
     <title>Ранобэ. Читать ранобэ онлайн на русском. Ранобэ онлайн!</title>
     <meta name="description" content="Ранобэ, Ранобэ онлайн! У нас всё ранобэ бесплатно и без регистрации! Читать ранобэ! ранобэ на русском языке, переводы ранобэ, популярнае ранобэ!
 "/>
@@ -138,6 +136,9 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script src="{{ asset('js/index.js') }}"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+
+  <script src="{{ asset('js/index.js') }}"></script>
+  @yield('scripts')
 </body>
 </html>

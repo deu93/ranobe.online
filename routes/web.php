@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AddBookController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthorsPanelController;
+use App\Http\Controllers\ChapterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/add-book', [AddBookController::class, 'index']);
 Route::post('/add-book', [AddBookController::class, 'store']);
 Route::get('/book/{slug}', [BookController::class, 'index']);
 Route::get('/authors-panel', [AuthorsPanelController::class, 'index']);
+Route::get('/add-chapter/{slug}', [ChapterController::class, 'index']);
+Route::post('/add-chapter/{slug}', [ChapterController::class, 'store']);

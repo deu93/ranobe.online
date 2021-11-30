@@ -967,6 +967,14 @@ body{
   margin-left: 100px;
   color: #FFCB9A;
 }
+.add_chapter_block h2{
+  padding-bottom: 20px;
+  margin-left: 250px;
+  color: #FFCB9A;
+}
+.add_chapter_block{
+  color:#000000
+}
 .input__wrapper {
   width: 100%;
   position: relative;
@@ -1035,6 +1043,19 @@ body{
   background-color: rgb(8, 149, 230);
   color: black;
 }
+.add_chapter_block button {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 105px;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+  cursor: pointer;
+}
+.add_chapter_block button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
 
 
 .add_book_item {
@@ -1070,6 +1091,39 @@ body{
 .add_book_item input:focus {
   outline: none;
 }
+.add_chapter_item {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.add_chapter_item input {
+  border-radius: 5px;
+  height: 40px;
+  background-color: #444444;
+  width: 700px;
+  color: #000000;
+}
+.add_chapter_item input::placeholder {
+  padding-left: 20px;
+  font-size: 13px;
+  color:#fb8c00; 
+}
+.add_chapter_item textarea {
+  border-radius: 5px;
+  
+  background-color: #444444;
+  width: 700px;
+  height: 80px;
+  color: #000000;
+}
+.add_chapter_item textarea::placeholder {
+  padding-left: 20px;
+  font-size: 13px;
+  padding-top: 30px;
+  color:#fb8c00; 
+}
+.add_chapter_item input:focus {
+  outline: none;
+}
 .add_book_genres {
   margin-left: 20px;
   color: #fb8c00;
@@ -1077,6 +1131,10 @@ body{
 
 .add_book_item_button {
   margin-left: 75px;
+  margin-top: 25px;
+}
+.add_chapter_item_button {
+  margin-left: 175px;
   margin-top: 25px;
 }
 .custom-checkbox {

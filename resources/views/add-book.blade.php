@@ -20,9 +20,13 @@
             <div class="add_book_item">
                 <input type="text" name="country" id="country" placeholder="Страна" value="{{ old('country') }}">
             </div>
-            <div class="add_book_genres">
-                <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-                <label for="happy">Жанр</label>
+            <div class="book_genres_block">
+                @foreach ($genres as $genre)
+                <div class="add_book_genres">
+                    <input type="checkbox" class="custom-checkbox" id="happy" name="{{ $genre->genres_name }}" value="{{ $genre->id }}">
+                    <label for="happy">Жанр</label>
+                </div>
+                @endforeach
             </div>
 
             <div class="add_book_item">

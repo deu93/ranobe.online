@@ -17,7 +17,10 @@ class AddBookController extends Controller
     }
     public function index() {
         if(auth()->user()->role > 1){
-            return view('add-book');
+            $genres = Genre::all();
+            return view('add-book', [
+                'genres' => $genres
+            ]);
         }else {
             return redirect()->back();
         }

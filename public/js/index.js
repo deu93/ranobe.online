@@ -89,7 +89,7 @@ function openCity1(evt, cityName) {
 document.getElementById("defaultOpen1").click();
 
 let objDiv = document.getElementById("scroll_bar");
-objDiv.scrollIntoView(false);
+objDiv.scrollTop = - objDiv.scrollHeight;
 
 
   

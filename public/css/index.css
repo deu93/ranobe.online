@@ -610,8 +610,8 @@ body{
   height: 650px;
   display: flex;
   flex-direction: column-reverse;
-  /* overflow: scroll;
-  overflow-x: hidden; */
+  overflow: scroll;
+  overflow-x: hidden;
   
   
   

@@ -609,7 +609,7 @@ body{
   border-radius: 10px;
   height: 650px;
   display: flex;
-  
+  flex-direction: column-reverse;
   overflow: scroll;
   overflow-x: hidden;
   

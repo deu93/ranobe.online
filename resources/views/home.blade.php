@@ -37,7 +37,9 @@
                     </p>  
                     <div class="section_likes">
                         <p class="last_update">
-                            2 hrs ago
+                            @if ($chapter)
+                            {{ $chapter->updated_at->toDateString() }}
+                            @endif
                         </p>
                         <div class="likes">
                               <button class="btn_like">

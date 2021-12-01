@@ -143,7 +143,14 @@
                     </div>
                     <div class="cont">
                         <h4>Жанры: </h4>
-                        <p>Приключения</p>
+                        <div class="cont_genres">
+                            @foreach ($genres as $genre)
+                                
+                                @if ($genre->genre_added == "1")
+                                    <p>{{ $genre->genres_name }} </p>
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
                 </div>
              </div>

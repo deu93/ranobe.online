@@ -1,11 +1,11 @@
 @if ($paginator->hasPages())
     <ul class="pager">
        
-        @if ($paginator->onFirstPage())
+        {{-- @if ($paginator->onFirstPage())
             <li class="disabled pagination"><span>← Предыдущая</span></li>
         @else
             <li class="pagination"><a  href="{{ $paginator->previousPageUrl() }}" rel="prev">← Предыдущая</a></li>
-        @endif
+        @endif --}}
 
 
       
@@ -30,10 +30,10 @@
 
 
         
-        @if ($paginator->hasMorePages())
+        {{-- @if ($paginator->hasMorePages())
             <li class="pagination"><a  href="{{ $paginator->nextPageUrl() }}" rel="next">Следующая →</a></li>
         @else
             <li class="disabled"><span>Следующая →</span></li>
-        @endif
+        @endif --}}
     </ul>
 @endif 

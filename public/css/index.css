@@ -1299,6 +1299,7 @@ body{
   align-items: center;
   padding: 3px;
   font-size: 16px;
+  
   min-width: 45px;
   min-height: 45px;
   border-radius: 50px;
@@ -1306,6 +1307,9 @@ body{
 }
 .pagination a {
   color: #1d1d1d;
+}
+.my-active{
+  font-weight: 800;
 }
 .disabled {
   color: #1d1d1d;

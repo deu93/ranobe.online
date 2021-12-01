@@ -65,21 +65,31 @@
     <div class="mobile">
         <div id="content" class="view_change_style standart">
             @foreach ($books as $book)
+            @php
+                $chapter = \App\Models\Chapter::where('book_id', $book->id)->latest()->first();
+            @endphp
             <div class="middle_column_content">
                 <div class="left_content">
                     <a href="{{ url('/book/' . $book->slug) }}">
                         <h2>{{ $book->title }}</h2>
                     </a>
                     <p class="last_update">
-                        4 hrs ago
+                        @if ($chapter)
+                            {{ $chapter->updated_at->toDateString() }}
+                        @endif
                     </p>
                     <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
                     <div class="last_chapter">
-                        <a href="#">
-                            <h4>
-                                Глава 1014
+                            @if ($chapter)
+                            <a href="{{ url('/'.$book->slug.'/'.$chapter->slug) }}">
+                             <h4>
+                                
+                            @if ($chapter)
+                                {{ $chapter->chapter_name }}
+                            @endif
                             </h4>
-                        </a>
+                              </a> 
+                            @endif
                     </div>
                     <a class="left_content_link" href="{{ url('/book/' . $book->slug) }}">Читать</a>
                     <div class="section_likes">

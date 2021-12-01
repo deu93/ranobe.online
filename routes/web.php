@@ -4,12 +4,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AddBookController;
-use App\Http\Controllers\AdminPanelController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\AuthorsPanelController;
-use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\ReaderController;
+use App\Http\Controllers\AddBookController;
+use App\Http\Controllers\ChapterController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminPanelController;
+use App\Http\Controllers\DescriptionController;
+use App\Http\Controllers\AuthorsPanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/add-book', [AddBookController::class, 'index']);
 Route::post('/add-book', [AddBookController::class, 'store']);
-Route::get('/book/{slug}', [BookController::class, 'index']);
+Route::get('/book/{slug}', [DescriptionController::class, 'index']);
 Route::get('/edit-book/{slug}', [BookController::class, 'edit']);
 Route::put('/edit-book/{slug}', [BookController::class, 'update']);
 

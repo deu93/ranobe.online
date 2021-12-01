@@ -535,9 +535,10 @@ body{
   
 }
 .content_right_block {
-  height: 50px;
+  min-height: 50px;
   display: flex;
   margin-bottom: 35px;
+  font-size: 14px;
 }
 .content_right_block svg {
   height: 25px;
@@ -550,6 +551,13 @@ body{
 .cont h4 {
   color: #FFCB9A;
   padding-bottom: 3px;
+}
+.cont_genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cont_genres p {
+  padding-right: 7px;
 }
 
 .svg_bg {
@@ -1311,6 +1319,9 @@ body{
   overflow:hidden;
   width: 220px;
   margin: 0px 10px;
+}
+.book_show_a  {
+  color:#f9f9fd
 }
 /* xs: 0,
 sm: 576px,

@@ -14,11 +14,20 @@
                         <h2>{{ $book->title }}</h2>
                     </a>
                     <div class="last_chapter">
-                        <a href="#">
+                            @php
+                            $chapter = \App\Models\Chapter::where('book_id', $book->id)->latest()->first();
+                            @endphp
+                            @if ($chapter)
+                                <a href="{{ url('/'.$book->slug.'/'.$chapter->slug) }}">
                             <h4>
-                                Глава 277 Сюэ Цзие
+                                
+                            @if ($chapter)
+                                {{ $chapter->chapter_name }}
+                            @endif
                             </h4>
-                        </a>
+                        </a> 
+                            @endif
+                       
                     </div>
                     @php
                         $shortDescription = Str::limit($book->description, 250, '...')

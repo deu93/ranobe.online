@@ -18,17 +18,6 @@ class BookController extends Controller
         $this->middleware('auth');
     }
 
-    public function index($slug) {
-        $book = Book::where('slug', $slug)->first();
-        $chapters =  Chapter::where('book_id' , $book->id )->get();
-        
-        return view('description', [
-            'book' => $book,
-            'chapters' => $chapters
-        ]);
-    }
-
-
     public function edit($slug) {
         $book= Book::where('slug',$slug)->first();
         

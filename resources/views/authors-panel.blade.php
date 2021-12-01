@@ -22,7 +22,7 @@
                                 @php
                                     $shortTitle = Str::limit($book->title, 20, '...')
                                 @endphp
-                                <h5>{{ $shortTitle }}</h5>
+                                <h5><a class="book_show_a" href="{{ url('/book/'.$book->slug) }}">{{ $shortTitle }}</h5></a>
                                 <img src="{{ asset('img/books/' . $book->image) }}" alt="kartinka">
                                 <div class="book_link_block">
                                     <a href="{{ url('/edit-book', $book->slug) }}">Редактировать</a>

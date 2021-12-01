@@ -166,13 +166,15 @@
             <div class="hearder_chapters_list">
                 Список глав
             </div>
-           <div id="scroll_bar" class="chapter_block">
-           @foreach ($chapters as $chapter )
-               <div class="chapter">
-                    <a href="{{url('/'.$book->slug.'/'.$chapter->slug)}}">{{ $chapter->chapter_name }}</a>
+           <div class="scroll_reverse">
+            <div id="scroll_bar" class="chapter_block">
+                @foreach ($chapters as $chapter )
+                    <div class="chapter">
+                         <a href="{{url('/'.$book->slug.'/'.$chapter->slug)}}">{{ $chapter->chapter_name }}</a>
+                     </div>
+                @endforeach
+                 
                 </div>
-           @endforeach
-            
            </div>
         </div>
         

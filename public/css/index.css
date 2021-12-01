@@ -612,9 +612,10 @@ body{
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
-  
-  
-  
+}
+.scroll_reverse{
+  display: flex;
+  flex-direction: column-reverse;
 }
 #scroll_bar::-webkit-scrollbar {
   width: 5px;

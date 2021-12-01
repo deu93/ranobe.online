@@ -41,7 +41,7 @@ class ChapterController extends Controller
             $chapter->chapter_name = $request->chapter_name;
             $chapter->chapter_text = $request->chapter_text;
             $chapter->book_id = $book->id;
-            $chapter->slug = Str::slug($request->chapter_name);
+            $chapter->slug = Str::slug($request->chapter_name,'-');
             $chapter->save();
             return redirect()->back()->with('status', 'Глава успешно добавлена');
          }

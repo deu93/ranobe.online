@@ -595,6 +595,7 @@ body{
 }
 .chapters_list {
   
+
 }
 
 .hearder_chapters_list {
@@ -995,7 +996,7 @@ body{
 }
 .add_book_block h2{
   padding-bottom: 20px;
-  margin-left: 100px;
+  margin-left: 80px;
   color: #FFCB9A;
 }
 .add_chapter_block h2{
@@ -1161,6 +1162,7 @@ body{
   flex-direction: row;
   
 }
+
 .book_genres_block {
   display: flex;
   flex-wrap: wrap;

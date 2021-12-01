@@ -89,7 +89,7 @@ function openCity1(evt, cityName) {
 document.getElementById("defaultOpen1").click();
 
 let objDiv = document.getElementById("chapter_block");
-objDiv.scrollTop = objDiv.scrollHeight;
+objDiv.scrollBottom = objDiv.scrollHeight;
 
 
   

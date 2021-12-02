@@ -26,6 +26,13 @@ class DescriptionController extends Controller
         ->where('book_genres.book_id', $book->id)
         ->select('book_genres.*', 'genres.genres_name', 'genres.id')
         ->get();
+        $arr_gen = [];
+        foreach($genres as $genre) {
+            if($genre->genre_added == '1') {
+                $arr_gen[$genre->id] = $genre->genres_name;
+            }
+        }
+        
 
         $count_posts = BookPost::where('book_id', $book->id)
         ->where('moderated', '1')
@@ -36,7 +43,8 @@ class DescriptionController extends Controller
             'chapters' => $chapters,
             'genres' => $genres,
             'posts' => $posts,
-            'count_posts' => $count_posts
+            'count_posts' => $count_posts,
+            'arr_gen' => $arr_gen
         ]);
     }
 

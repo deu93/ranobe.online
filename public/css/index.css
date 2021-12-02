@@ -1607,6 +1607,7 @@ xxl: 1400px */
   .last_chapter {
     width: 360px;
     border: none;
+    margin-bottom: 20px;
     
   }
   .last_chapter a{
@@ -1668,7 +1669,7 @@ xxl: 1400px */
   
  
   .reg_item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-left: 5px;
   }
   .reg_item input {

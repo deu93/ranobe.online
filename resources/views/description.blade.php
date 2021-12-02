@@ -37,12 +37,16 @@
                     <div class="cont">
                         <h4>Жанры: </h4>
                         <div class="cont_genres">
-                            @foreach ($genres as $genre)
+                            @foreach ($arr_gen as $item )
+                                @if ($item != end($arr_gen))
                                 
-                                @if ($genre->genre_added == "1")
-                                    <p>{{ $genre->genres_name }} </p>
+                                    <p>{{ $item }}, </p>
+                                @else
+                                <p>{{ $item }} </p>
                                 @endif
                             @endforeach
+                                
+                                
                         </div>
                     </div>
                 </div>

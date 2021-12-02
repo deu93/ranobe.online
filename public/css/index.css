@@ -615,7 +615,7 @@ body{
 .chapter_block {
   background-color: #1d1d1d;
   border-radius: 10px;
-  height: 650px;
+  min-height: 250px;
   display: flex;
   flex-direction: column-reverse;
   overflow: scroll;
@@ -661,6 +661,7 @@ body{
 .comment {
   padding-left: 20px;
   background-color: #2a2a2a;
+  margin-bottom: 20px;
 }
 .comment h3 {
   font-size: 13px;
@@ -993,6 +994,50 @@ body{
   font-size: 14px;
   color: rgb(136, 2, 2);
 }
+.moderate_page {
+  width: 840px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  
+}
+.moderate_block td,th{
+  border: 1px solid #fb8c00;
+  padding: 5px;
+  max-width: 200px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.moderate_block table{
+ min-width: 400px;
+ text-align: center;
+ 
+}
+.post_accept{
+  color:green;
+  font-size: 25px;
+}
+.post_delete{
+  color:red;
+  font-size: 25px;
+}
+.table_block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.moderate_block{
+  color: #8d8c8c;
+}
+.moderate_block h2{
+padding-bottom: 20px;
+margin-left: 80px;
+color:#fd961f;
+}
 .add_book_page {
     width: 840px;
     min-height: 550px;
@@ -1315,6 +1360,52 @@ body{
   color: #1d1d1d;
   
   background-color: #3498DB;
+}
+
+.add_comment textarea {
+  border-radius: 5px;
+  background-color: #181818;
+  width: 100%;
+  min-height: 100px;
+  color: #d3d3d3;
+  margin-bottom: 20px;
+  resize: none;
+}
+.add_comment textarea::placeholder {
+  padding-left: 10px;
+  font-size: 13px;
+  padding-top: 5px;
+  color:#fb8c00; 
+}
+.add_comment textarea:focus {
+  outline: #b8b6b6 1px solid;
+}
+
+.add_comment form {
+  position: relative;
+  
+}
+
+
+.add_comment_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+  color:#fb8c00;
+  font-size: 20px;
+}
+
+.add_comment button {
+  position: absolute;
+  top: 1.5em;
+  cursor: pointer;
+  right: .4em;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 1.1em;
+  border: 1px solid;
+  text-transform: uppercase;
 }
 
 

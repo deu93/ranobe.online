@@ -194,23 +194,48 @@
     
 </div>
 <div class="comments">
-    <h2>Комментарии 1</h2>
-    <div class="comment">
-        <div class="profile_block">
-            <div class="profile_img">
-                R
+    @if ($posts->count())
+        <h2>Комментарии {{ $count_posts->count() }}</h2>
+    @else
+        <h2>Комментариев нет</h2>
+    @endif
+    
+    @auth
+    <div class="add_comment">
+        <form action="{{ url('/add-post/'. $book->slug) }}" method="POST">
+            @csrf
+            <textarea name="body" placeholder="Написать комментарий" class="@error('body') error  @enderror" ></textarea>
+            @error('body')
+                <div class="error_text">
+                    Поле не может быть пустым.
+                </div>
+            @enderror
+            <button class="add_comment_btn" type="submit">	
+                &#10140;</button>
+        </form>
+    </div>
+    @endauth
+    <div class="comments_block">
+        @foreach ($posts as $post)
+        @if ($post->moderated == '1')
+        <div class="comment">
+            <div class="profile_block">
+                <div class="profile_img">
+                    {{ $post->name[0] }}
+                </div>
+                <div class="com_block">
+                    <h3>{{ $post->name }}</h3>
+                    <small>{{  Carbon\Carbon::parse($post->created_at)->format('Y-m-d') }}</small>
+                </div>
             </div>
-            <div class="com_block">
-                <h3>Reinar Delvig</h3>
-                <small>28 августа</small>
-            </div>
+            
+            <p>
+                {{ $post->body }}
+            </p>
         </div>
         
-        <p>
-            "Внимание: Главный герой чрезвычайно силён и талантлив, но наивен/невинен поначалу из-за своей болезни. Если вы не можете дождаться развития персонажа и не любите очень сильных главных героев, вам это не подойдёт. Кроме того, «Земля» в этом романе – это не та Земля, на которой мы сейчас живём, поэтому не используйте здравый смысл во время чтения этого романа. В конце концов, это чистая фантазия."
-
-            Хаха, кажется, переводчик вообще не читал о настоящих слюнтяях, а данный персонаж, на мой субъективный вкус, показался достаточно адекватным, а самое главное рассудительным и пускай немного наивным, но это ведь понятно из его инвалидности в реальности.... Хотя у меня есть сомнения, насчёт того, не вторая ли реальность этот "виртуальный мир".
-        </p>
+        @endif
+        @endforeach
     </div>
 </div>
 @endsection

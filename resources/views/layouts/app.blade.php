@@ -59,6 +59,9 @@ type="text/javascript" charset="utf-8" ></script>
                                   @if (auth()->user()->role > 1)
                                   <a href="{{ url('/authors-panel') }}">Панель автора</a>
                                   @endif
+                                  @if (auth()->user()->role == 1 or auth()->user()->role > 2 )
+                                  <a href="{{ url('/moderate-panel') }}">Панель модерации</a>
+                                  @endif
                                   <form action="{{ url('/logout') }}" method="POST">
                                       @csrf
                                       <div class="logout_btn">

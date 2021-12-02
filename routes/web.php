@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\AuthorsPanelController;
+use App\Http\Controllers\ModerateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,14 +26,17 @@ use App\Http\Controllers\AuthorsPanelController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/add-book', [AddBookController::class, 'index']);
 Route::post('/add-book', [AddBookController::class, 'store']);
 Route::get('/book/{slug}', [DescriptionController::class, 'index']);
+Route::post('/add-post/{slug}', [DescriptionController::class, 'store']);
 Route::get('/edit-book/{slug}', [BookController::class, 'edit']);
 Route::put('/edit-book/{slug}', [BookController::class, 'update']);
-
+Route::get('/moderate-panel', [ModerateController::class, 'index']);
+Route::get('/moderate/accept/{id}', [ModerateController::class, 'accept']);
+Route::get('/moderate/delete/{id}', [ModerateController::class, 'delete']);
 Route::get('/authors-panel', [AuthorsPanelController::class, 'index']);
 Route::get('/add-chapter/{slug}', [ChapterController::class, 'index']);
 Route::post('/add-chapter/{slug}', [ChapterController::class, 'store']);

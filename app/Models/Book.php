@@ -32,4 +32,7 @@ class Book extends Model
     public function chapter() {
         return $this->hasMany(Chapter::class);
     }
+    public function post() {
+        return $this->hasMany(BookPost::class);
+    }
 }

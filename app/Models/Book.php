@@ -20,7 +20,9 @@ class Book extends Model
         'author',
         'country',
     ];
-
+    public  function scopeLike($query, $field, $value){
+        return $query->where($field, 'LIKE', "%$value%");
+    }
     public function user() {
         return $this->belongsTo(User::class);
     }

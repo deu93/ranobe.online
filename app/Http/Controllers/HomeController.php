@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = Book::latest()->paginate(20);
         
         
        

@@ -59,7 +59,9 @@
                 </div>
             </div>
             @endforeach
-            {{-- $books->links('vendor.pagination.custom') --}}
+            <div class="book_links">
+                {{ $books->links('vendor.pagination.custom') }}
+            </div>
         </div>
     </div>
     <div class="mobile">
@@ -111,7 +113,9 @@
                 </div>
             </div>
             @endforeach
-            
+            <div class="book_links">
+                {{ $books->links('vendor.pagination.custom') }}
+            </div>
         </div>
     </div>
 

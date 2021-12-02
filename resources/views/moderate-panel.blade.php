@@ -17,7 +17,9 @@
                     
                 </table>
                 @else
-                <h3>Нет новых комментариев</h3>
+                <div class="moderate_no_chapters">
+                    <h3>Нет новых комментариев</h3>
+                </div>
                 @endif
                 
             </div>

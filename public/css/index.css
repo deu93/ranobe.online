@@ -1010,6 +1010,11 @@ body{
   border-collapse: collapse;
   font-size: 14px;
 }
+.moderate_no_chapters{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .moderate_block table{
  min-width: 400px;
  text-align: center;

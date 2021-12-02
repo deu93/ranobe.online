@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Chapter;
+use DateTime;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -43,6 +44,9 @@ class ChapterController extends Controller
             $chapter->book_id = $book->id;
             $chapter->slug = Str::slug($request->chapter_name,'-');
             $chapter->save();
+
+            $book->updated_at = new DateTime();
+            $book->update();
             return redirect()->back()->with('status', 'Глава успешно добавлена');
          }
         

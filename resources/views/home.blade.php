@@ -60,7 +60,7 @@
             </div>
             @endforeach
             <div class="book_links">
-                {{ $books->links('vendor.pagination.custom') }}
+                {{-- {{ $books->links('vendor.pagination.custom') }} --}}
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
             </div>
             @endforeach
             <div class="book_links">
-                {{ $books->links('vendor.pagination.custom') }}
+                {{-- {{ $books->links('vendor.pagination.custom') }} --}}
             </div>
         </div>
     </div>

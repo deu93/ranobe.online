@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\BookLike;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Book extends Model
 {
@@ -36,5 +37,11 @@ class Book extends Model
     }
     public function post() {
         return $this->hasMany(BookPost::class);
+    }
+    public function likes() {
+        return $this->hasMany(BookLike::class);
+    }
+    public function dislikes() {
+        return $this->hasMany(BookDislike::class);
     }
 }

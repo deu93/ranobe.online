@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\AuthorsPanelController;
+use App\Http\Controllers\BookLikeController;
 use App\Http\Controllers\ModerateController;
 
 /*
@@ -43,3 +44,4 @@ Route::post('/add-chapter/{slug}', [ChapterController::class, 'store']);
 Route::get('/{slug}/{chapter_slug}', [ReaderController::class, 'index']);
 Route::get('/admin-panel', [AdminPanelController::class, 'index']);
 Route::post('/add-genre', [AdminPanelController::class, 'store']);
+Route::post('/book/{book}/likes', [BookLikeController::class, 'store'])->name('book.likes');

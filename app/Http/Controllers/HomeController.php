@@ -27,9 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $books = DB::table('books')->orderBy('updated_at', 'desc')->paginate(20);
-        Carbon::setLocale('ru');
-        
+        $books = Book::orderBy('updated_at', 'desc')->paginate(20);
+        Carbon::setLocale('ru');        
        
         
         return view('home', [

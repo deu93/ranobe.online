@@ -14,6 +14,8 @@ class SearchController extends Controller
             'search' => 'required|min:3|max:255'
         ]);
         $search = Book::like('title', $request->search);
-        return view('search');
+        return view('search', [
+            'search_results' => $search
+        ]);
     }
 }

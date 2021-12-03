@@ -1610,6 +1610,10 @@ xxl: 1400px */
     margin-bottom: 20px;
     
   }
+  .block_displ{
+    width: 100px;
+    min-height: 50px;
+  }
   .last_chapter a{
     text-decoration: none;
   }

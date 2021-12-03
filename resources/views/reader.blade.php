@@ -10,9 +10,17 @@
             @endphp
         </div>
         <div class="reader_links">
-            <a href="">Предыдущая</a>
+            @if ($prev)
+                <a href="{{ url('/'. $book->slug. '/'. $prev->slug ) }}">Предыдущая</a>
+            @else
+            <div class="block_displ">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            @endif
             <a href="{{ url('/book/'. $book->slug) }}">Оглавление</a>
-            <a href="#">Следующая</a>
+            @if ($next)
+            <a href="{{ url('/'. $book->slug. '/'. $next->slug ) }}">Следующая</a>
+            @endif
             
         </div>
     </div>

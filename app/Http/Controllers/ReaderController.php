@@ -17,11 +17,12 @@ class ReaderController extends Controller
         ->where('id', '>', $chapter->id)
         ->oldest()
         ->first();
-        
+
         $prev = Chapter::where('book_id', $book->id)
         ->where('id', '<', $chapter->id)
         ->latest()
         ->first();
+        
         
         
         return view('reader', [

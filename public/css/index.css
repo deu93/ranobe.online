@@ -1413,7 +1413,10 @@ color:#fd961f;
   text-transform: uppercase;
 }
 
-
+.block_displ {
+  width: 50px;
+  width: 205px;
+}
 
 .book_show {
   overflow:hidden;
@@ -1610,10 +1613,7 @@ xxl: 1400px */
     margin-bottom: 20px;
     
   }
-  .block_displ{
-    width: 100px;
-    min-height: 50px;
-  }
+  
   .last_chapter a{
     text-decoration: none;
   }

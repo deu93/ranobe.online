@@ -19,8 +19,10 @@
                 @enderror
             </div>
             <div class="auth_item">
-                <label for="remember">Запомнить меня</label>
+                <div class="remember_me">
+                    <label for="remember">Запомнить меня</label>
                 <input type="checkbox" name="remember">
+                </div>
             </div>
             <div class="auth_item_button">
                 <button type="submit">Войти</button>

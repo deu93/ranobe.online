@@ -27,13 +27,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $books = Book::orderBy('updated_at', 'desc')->paginate(20);
+        $books = Book::orderBy('updated_at', 'desc')->with('user','likes','dislikes','chapter')->paginate(20);
         Carbon::setLocale('ru');        
        
         
         return view('home', [
             'books' => $books,
-            
         ]);
     }
 }

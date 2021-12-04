@@ -14,14 +14,15 @@
                     </a>
                     <div class="last_chapter">
                             @php
-                            $chapter = \App\Models\Chapter::where('book_id', $book->id)->latest()->first();
+                            // $chapter = \App\Models\Chapter::where('book_id', $book->id)->latest()->first();
+                            
                             @endphp
-                            @if ($chapter)
-                                <a href="{{ url('/'.$book->slug.'/'.$chapter->slug) }}">
+                            @if ($book->chapter->last())
+                                <a href="{{ url('/'.$book->slug.'/'.$book->chapter->last()->slug) }}">
                             <h4>
                                 
-                            @if ($chapter)
-                                {{ $chapter->chapter_name }}
+                            @if ($book->chapter->last())
+                                {{ $book->chapter->last()->chapter_name }}
                             @endif
                             </h4>
                         </a> 
@@ -36,8 +37,8 @@
                     </p>  
                     <div class="section_likes">
                         <p class="last_update">
-                            @if ($chapter)
-                            {{ $chapter->updated_at->diffForHumans() }}
+                            @if ($book->chapter->last())
+                            {{ $book->chapter->last()->updated_at->diffForHumans() }}
                             @endif
                         </p>
                         <div class="likes">
@@ -74,27 +75,25 @@
     <div class="mobile">
         <div id="content" class="view_change_style standart">
             @foreach ($books as $book)
-            @php
-                $chapter = \App\Models\Chapter::where('book_id', $book->id)->latest()->first();
-            @endphp
+            
             <div class="middle_column_content">
                 <div class="left_content">
                     <a href="{{ url('/book/' . $book->slug) }}">
                         <h2>{{ $book->title }}</h2>
                     </a>
                     <p class="last_update">
-                        @if ($chapter)
-                            {{ $chapter->updated_at->diffForHumans() }}
+                        @if ($book->chapter->last())
+                            {{ $book->chapter->last()->updated_at->diffForHumans() }}
                         @endif
                     </p>
                     <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
                     <div class="last_chapter">
-                            @if ($chapter)
-                            <a href="{{ url('/'.$book->slug.'/'.$chapter->slug) }}">
+                            @if ($book->chapter->last())
+                            <a href="{{ url('/'.$book->slug.'/'.$book->chapter->last()->slug) }}">
                              <h4>
                                 
-                            @if ($chapter)
-                                {{ $chapter->chapter_name }}
+                            @if ($book->chapter->last())
+                                {{ $book->chapter->last()->chapter_name }}
                             @endif
                             </h4>
                               </a> 

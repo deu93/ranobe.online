@@ -27,7 +27,7 @@
                                 <div class="book_link_block">
                                     <a href="{{ url('/edit-book', $book->slug) }}">Редактировать</a>
                                     <a href="{{ url('/add-chapter/'. $book->slug) }}">Добавить главу</a>
-                                    <a  href="{{ url('/delete-book'. $book->slug) }}">Удалить книгу</a>
+                                    <a  href="{{ url('/delete-book/'. $book->slug) }}">Удалить книгу</a>
                                 </div>
                             </div>
                         @endforeach</div>

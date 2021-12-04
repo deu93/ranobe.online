@@ -16,7 +16,7 @@ class AuthorsPanelController extends Controller
         if(auth()->user()->role < 2) {
              return abort(404);
         }else{
-            $books = Book::where('user_id', auth()->user()->id)->paginate(3);
+            $books = Book::where('user_id', auth()->user()->id)->latest()->paginate(3);
             return view('authors-panel', [
                 'books' => $books
             ]);

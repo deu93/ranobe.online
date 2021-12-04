@@ -547,6 +547,7 @@ body{
 }
 .cont {
   margin-left: 12px;
+  width: 230px;
 }
 .cont h4 {
   color: #FFCB9A;
@@ -568,7 +569,7 @@ body{
   display: flex;
   justify-content: center;
   border-radius: 50px;
-  flex-wrap: nowrap;
+  
   
 }
 

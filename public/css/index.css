@@ -568,6 +568,7 @@ body{
   display: flex;
   justify-content: center;
   border-radius: 50px;
+  flex-wrap: nowrap;
   
 }
 

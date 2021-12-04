@@ -11,6 +11,5 @@ class BookLike extends Model
 
     protected $fillable = [
         'user_id',
-        
     ];
 }

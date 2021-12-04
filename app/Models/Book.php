@@ -44,4 +44,11 @@ class Book extends Model
     public function dislikes() {
         return $this->hasMany(BookDislike::class);
     }
+
+    public function likedBy() {
+        return $this->likes->contains('user_id', auth()->user()->id);
+    }
+    public function dislikedBy() {
+        return $this->dislikes->contains('user_id', auth()->user()->id);
+    }
 }

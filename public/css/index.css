@@ -963,8 +963,14 @@ body{
   align-items: center;
 }
 .reader_block {
-  width: 820px;
+  width: 800px;
   text-align: justify;
+  line-height: 1.8;
+}
+.reader_container h2 {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
   
 }
 .reader_links {
@@ -1455,7 +1461,7 @@ xxl: 1400px */
     width: 360px;
   }
   .reader_block{
-    width: 340px;
+    width: 320px;
   }
   .reader_block h2  {
     margin-bottom: 5px;

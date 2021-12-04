@@ -6,7 +6,7 @@
 <div  class="middle_column">
     <div class="content_left">
         <img src="{{ asset('img/books/' . $book->image) }}" alt="" class="content_left_img">
-        <a class="content_left_link" href="">Начать читать</a>
+        <a class="content_left_link" href="{{ '/'. $book->slug . '/'.$book->chapter->first()->slug }}">Начать читать</a>
     </div>
 
     <div class="content_right">

@@ -6,15 +6,17 @@
         <div class="reader_container">
             <h2>{{ $chapter->chapter_name }}</h2>
             @php
+                $menu = 1;
                 echo $chapter->chapter_text;
             @endphp
         </div>
+
         <div class="reader_links">
             @if ($prev)
                 <a href="{{ url('/'. $book->slug. '/'. $prev->slug ) }}">Предыдущая</a>
             @else
             <div class="block_displ">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
             </div>
             @endif
             <a href="{{ url('/book/'. $book->slug) }}">Оглавление</a>

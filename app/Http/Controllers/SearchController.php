@@ -9,11 +9,15 @@ class SearchController extends Controller
 {
     
 
-    public function index(Request $request) {
+    public function index() {
+        return view('search');
+    }
+    public function search(Request $request) {
+        
         $this->validate($request, [
             'search' => 'required|min:3|max:255'
         ]);
-        $search = Book::like('title', $request->search);
+        $search = Book::like('title', $request->search)->with('user','likes','dislikes','chapter')->paginate(20);
         return view('search', [
             'search_results' => $search
         ]);

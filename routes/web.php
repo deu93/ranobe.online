@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReaderController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AddBookController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\ProfileController;
@@ -51,3 +52,5 @@ Route::post('/book/{book}/likes', [BookLikeController::class, 'like'])->name('bo
 Route::post('/book/{book}/dislikes', [BookLikeController::class, 'dislike'])->name('book.dislikes');
 Route::get('/all-books', [AllBooksController::class, 'index']);
 Route::get('/finished-books', [FinishedBooksController::class, 'index']);
+Route::get('/search', [SearchController::class, 'index']);
+Route::post('/search', [SearchController::class, 'search']);

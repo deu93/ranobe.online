@@ -964,6 +964,13 @@ body{
   justify-content: center;
   align-items: center;
 }
+.no_finished {
+  display: flex;
+  min-height: 350px;
+  width: 840px;
+  justify-content: center;
+  align-items: center;
+}
 .reader_block {
   width: 800px;
   text-align: justify;

@@ -1,8 +1,12 @@
 @extends('layouts.app')
 @section('content')
+@php
+    $shuffled = $books->shuffle();
+    $shuffled->all();
+@endphp
     <div  class="middle_column">
         <div id="content" class="view_change_style standart">
-            @foreach ($books as $book)
+            @foreach ($shuffled as $book)
             <div class="middle_column_content">
                 <div class="left_content">
                     <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
@@ -70,7 +74,7 @@
     </div>
     <div class="mobile">
         <div id="content" class="view_change_style standart">
-            @foreach ($books as $book)
+            @foreach ($shuffled as $book)
             
             <div class="middle_column_content">
                 <div class="left_content">

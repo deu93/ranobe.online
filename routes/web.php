@@ -8,12 +8,14 @@ use App\Http\Controllers\ReaderController;
 use App\Http\Controllers\AddBookController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AllBooksController;
 use App\Http\Controllers\BookLikeController;
 use App\Http\Controllers\ModerateController;
 use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\BookDislikeController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\AuthorsPanelController;
+use App\Http\Controllers\FinishedBooksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +49,5 @@ Route::get('/admin-panel', [AdminPanelController::class, 'index']);
 Route::post('/add-genre', [AdminPanelController::class, 'store']);
 Route::post('/book/{book}/likes', [BookLikeController::class, 'like'])->name('book.likes');
 Route::post('/book/{book}/dislikes', [BookLikeController::class, 'dislike'])->name('book.dislikes');
+Route::get('/all-books', [AllBooksController::class, 'index']);
+Route::get('/finished-books', [FinishedBooksController::class, 'index']);

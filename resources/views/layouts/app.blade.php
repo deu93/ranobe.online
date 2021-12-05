@@ -35,9 +35,9 @@ type="text/javascript" charset="utf-8" ></script>
                     <div class="dropdown">
                         <button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
                         <div id="myDropdown" class="dropdown-content">
-                          <a href="/all-books">Все книги</a>
-                          <a href="/by-genre">По жанрам</a>
-                          <a href="/finished">Законченные</a>
+                          <a href="{{ url('/all-books') }}">Все книги</a>
+                          <a href="{{ url('/by-genre') }}">По жанрам</a>
+                          <a href="{{ url('/finished-books') }}">Законченные</a>
                          @auth
                          @endauth
                         </div>

@@ -121,7 +121,7 @@
             </a>
             
             <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
-            <a class="left_content_link description_link" href="{{ url('/book/' . $book->slug) }}">Начать читать</a>
+            <a class="left_content_link description_link" href="{{ url('/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
              <div class="description_content">
                 <div class="content_right_block">
                     <div class="svg_bg">
@@ -160,10 +160,12 @@
                     <div class="cont">
                         <h4>Жанры: </h4>
                         <div class="cont_genres">
-                            @foreach ($genres as $genre)
+                            @foreach ($arr_gen as $item )
+                                @if ($item != end($arr_gen))
                                 
-                                @if ($genre->genre_added == "1")
-                                    <p>{{ $genre->genres_name }} </p>
+                                    <p>{{ $item }}, </p>
+                                @else
+                                <p>{{ $item }} </p>
                                 @endif
                             @endforeach
                         </div>

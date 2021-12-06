@@ -270,3 +270,8 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+<script src="{{ asset('/js/main.js') }}"
+type="text/javascript" charset="utf-8" ></script>
+@endsection

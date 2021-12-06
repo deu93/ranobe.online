@@ -321,8 +321,6 @@ body{
   border: 0;
   background: transparent;
   cursor: pointer;
-  
-  
 }
 
 .search {
@@ -978,6 +976,9 @@ body{
   text-align: justify;
   line-height: 1.8;
 }
+#reader_container {
+  font-size: 14px;
+}
 .reader_container h2 {
   margin-bottom: 10px;
   display: flex;
@@ -1469,6 +1470,61 @@ color:#fd961f;
   text-decoration: none;
   color: #fb8c00;
 }
+
+.menu_styles_btn {
+  background-color: #3498DB;
+  color: rgba(141, 141, 141, 0.89);
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+.menu_styles_dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+.menu_styles_item_block {
+  color: #3498DB;
+  margin-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.menu_styles_item {
+  display: flex;
+}
+.menu_styles_item_btns {
+  display: flex;
+  margin-left: 10px;
+}
+.menu_styles_item_btns button{
+  color: #b8b6b6;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.dropdown-content-menu-styles a {
+  color: rgba(255, 255, 255, 0.787);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content-menu-styles a:hover {background-color: rgb(29, 29, 29);
+  color: #fd961f;
+}
+.menu_styles {
+  display: flex;
+  justify-content: center;
+  border-bottom:1px solid  rgba(167, 166, 166, 0.226);
+}
+.menu_styles button {
+  font-family: inherit;
+  border: 0;
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 
 /* xs: 0,
 sm: 576px,

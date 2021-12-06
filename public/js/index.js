@@ -8,21 +8,27 @@ function authDropdown() {
     document.getElementById("authDropdown").classList.toggle("show");
     
  }
-  
-  window.onclick = function(event) {
-    if (!event.target.matches('i.fas.fa-bars')) {
-      if((!event.target.matches('i.fas.fa-user-alt'))) {
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
+ window.onclick = function(event) {
+  if(!event.target.matches('button.button_style')){
+
+    if(!event.target.matches('i.fas.fa-cog')){
+     if (!event.target.matches('i.fas.fa-bars')) {
+       if((!event.target.matches('i.fas.fa-user-alt'))) {
+         let dropdowns = document.getElementsByClassName("dropdown-content");
+         let i;
+         for (i = 0; i < dropdowns.length; i++) {
+           let openDropdown = dropdowns[i];
+           if (openDropdown.classList.contains('show')) {
+             openDropdown.classList.remove('show');
+           }
+         }
+       }
+     }
     }
   }
+   
+}
+  
   
 
 $('body').append('<div class="upbtn"></div>');            
@@ -44,112 +50,80 @@ $('.upbtn').on('click',function() {
     return false;
 });  
 
-function openCity(evt, cityName) {
-  // Declare all variables
-  let i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+function menuStyles() {
+  document.getElementById("menuStyles").classList.toggle("show");
 }
-document.getElementById("defaultOpen").click();
 
-function openCity1(evt, cityName) {
-  // Declare all variables
-  let i, tabcontent, tablinks;
+size=14;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent1");
-  for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-  }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks1");
-  for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+$("#fontIncrem").on("click",function(){
+  console.log
+  size=size+1;
+   $("reader_container").css("font-size",size + "px");
+   
+  //  
+});
+localFontSize = localStorage.getItem('fontSize')
+localLineHeight = localStorage.getItem('line-height')
+if(typeof(localFontSize) != "undefined" && localFontSize !== null) {
+  fontSize = localFontSize;
+  
+  $("#fontCurrent").text(fontSize);
+  
+}else {
+  fontSize = 14;
+  $("#fontCurrent").text(fontSize);
+  textBoxes.css("font-size", fontSize);
 }
-document.getElementById("defaultOpen1").click();
+if(typeof(localLineHeight) != "undefined" && localLineHeight !== null) {
+  lineHeight = localLineHeight;
+  
+  $("#lhCurrent").text(lineHeight);
+  
+}else {
+  lineHeight = 1.8;
+  $("#lhCurrent").text(lineHeight);
+  
+}
+$('.reader_container_text').css({fontSize: fontSize+'px'});
+$('.reader_container_text').css({lineHeight: lineHeight});
 
-let objDiv = document.getElementById("scroll_bar");
-objDiv.scrollTop = - objDiv.scrollHeight;
 
-$(document).ready(function () {
-  // line height in 'px'
-  var maxheight=65;
-  var showText = 'Развернуть <i class="fas fa-chevron-down"></i>';
-  var hideText = 'Свернуть <i class="fas fa-angle-up"></i>';
+$("#fontDecrem").click(function() {
+  
+  var textBoxes = $('.reader_container_text');
+   fontSize--;
+   textBoxes.css("font-size", fontSize);
+   localStorage.setItem('fontSize', fontSize)
+   $("#fontCurrent").text(fontSize);
+ });
+$("#lhDecrem").click(function() {
+  $("#lhCurrent").text(lineHeight);
+  var textBoxes = $('.reader_container_text');
+   lineHeight -= 0.1;
+   textBoxes.css("line-height", lineHeight);
+   localStorage.setItem('lineHeight', lineHeight)
+   console.log(lineHeight)
+ });
+$("#lhIncrem").click(function() {
+  $("#lhCurrent").text(lineHeight);
+  var textBoxes = $('.reader_container_text');
+   lineHeight +=  0.1;
+   textBoxes.css("line-height", lineHeight);
+   localStorage.setItem('lineHeight', lineHeight)
+   console.log(lineHeight)
+ });
+ 
+// $("#fontDecrem").on("click",function(){
+  
+//   var textBoxes = $('.');
+//    var fontSize = getCurrentFontSize(textBoxes);
+//     textBoxes.css("font-size", fontSize - 1);
+   
+// });
 
-  $('.textContainer_Truncate').each(function () {
-    var text = $(this);
-    if (text.height() > maxheight){
-        text.css({ 'overflow': 'hidden','height': maxheight + 'px' });
 
-        var link = $('<a href="#">' + showText + '</a>');
-        var linkDiv = $('<div class="select_btn"></div>');
-        linkDiv.append(link);
-        $(this).after(linkDiv);
 
-        link.click(function (event) {
-          event.preventDefault();
-
-          if (text.height() > maxheight)  {
-              $(this).html(showText);
-              text.css('height', maxheight + 'px');
-          } else {
-              $(this).html(hideText);
-              text.css('height', 'auto');
-          }
-        });
-    }       
-  });
-});
-$(document).ready(function () {
-  // line height in 'px'
-  var maxheight=25;
-  var showText = 'Развернуть <i class="fas fa-chevron-down"></i>';
-  var hideText = 'Свернуть <i class="fas fa-angle-up"></i>';
-
-  $('.textContainer_Truncate1').each(function () {
-    var text = $(this);
-    if (text.height() > maxheight){
-        text.css({ 'overflow': 'hidden','height': maxheight + 'px' });
-
-        var link = $('<a href="#">' + showText + '</a>');
-        var linkDiv = $('<div class="select_btn"></div>');
-        linkDiv.append(link);
-        $(this).after(linkDiv);
-
-        link.click(function (event) {
-          event.preventDefault();
-
-          if (text.height() > maxheight)  {
-              $(this).html(showText);
-              text.css('height', maxheight + 'px');
-          } else {
-              $(this).html(hideText);
-              text.css('height', 'auto');
-          }
-        });
-    }       
-  });
-});
 
   

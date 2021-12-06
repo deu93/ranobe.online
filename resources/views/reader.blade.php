@@ -3,12 +3,14 @@
 @section('content')
 <div class="reader_page">
     <div class="reader_block">
-        <div class="reader_container">
+        <div  class="reader_container">
             <h2>{{ $chapter->chapter_name }}</h2>
-            @php
+            <div id="reader_container" class="reader_container_text">
+                @php
                 $menu = 1;
                 echo $chapter->chapter_text;
             @endphp
+            </div>
         </div>
 
         <div class="reader_links">

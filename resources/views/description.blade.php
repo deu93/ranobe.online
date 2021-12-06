@@ -6,7 +6,10 @@
 <div  class="middle_column">
     <div class="content_left">
         <img src="{{ asset('img/books/' . $book->image) }}" alt="" class="content_left_img">
+        @if ($book->chapter->count())
         <a class="content_left_link" href="{{ '/'. $book->slug . '/'.$book->chapter->first()->slug }}">Начать читать</a>
+            
+        @endif
     </div>
 
     <div class="content_right">
@@ -37,7 +40,8 @@
                     <div class="cont">
                         <h4>Жанры: </h4>
                         <div class="cont_genres">
-                            @foreach ($arr_gen as $item )
+                            <div class="textContainer_Truncate1">
+                                @foreach ($arr_gen as $item )
                                 @if ($item != end($arr_gen))
                                 
                                     <p>{{ $item }}, </p>
@@ -45,6 +49,7 @@
                                 <p>{{ $item }} </p>
                                 @endif
                             @endforeach
+                            </div>
                                 
                                 
                         </div>
@@ -101,7 +106,9 @@
               </div>
             <div class="right_description">
                 <div id="description" class="tabcontent">
-                    <p>{{ $book->description }}</p>
+                    <div id="select_text" class="textContainer_Truncate">
+                        <p>{{ $book->description }}</p>
+                    </div>
                   </div>
 
                   <div id="about" class="tabcontent">
@@ -121,7 +128,9 @@
             </a>
             
             <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
+            @if($book->chapter->count())
             <a class="left_content_link description_link" href="{{ url('/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
+            @endif
              <div class="description_content">
                 <div class="content_right_block">
                     <div class="svg_bg">
@@ -160,7 +169,8 @@
                     <div class="cont">
                         <h4>Жанры: </h4>
                         <div class="cont_genres">
-                            @foreach ($arr_gen as $item )
+                            <div class="textContainer_Truncate1">
+                                @foreach ($arr_gen as $item )
                                 @if ($item != end($arr_gen))
                                 
                                     <p>{{ $item }}, </p>
@@ -168,6 +178,7 @@
                                 <p>{{ $item }} </p>
                                 @endif
                             @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +191,9 @@
                   </div>
                 <div class="content_right_description">
                     <div id="description1" class="tabcontent1">
-                        <p>{{ $book->description }}</p>
+                        <div id="select_text" class="textContainer_Truncate">
+                            <p>{{ $book->description }}</p>
+                        </div>
                       </div>
     
                       <div id="about1" class="tabcontent1">

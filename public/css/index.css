@@ -1455,6 +1455,21 @@ color:#fd961f;
   margin-left: 7px;
   padding: 0;
 }
+
+
+.textContainer_Truncate1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.select_btn{
+  margin-top: 5px;
+}
+.select_btn a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fb8c00;
+}
+
 /* xs: 0,
 sm: 576px,
 md: 768px,

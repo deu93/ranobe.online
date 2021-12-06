@@ -91,5 +91,65 @@ document.getElementById("defaultOpen1").click();
 let objDiv = document.getElementById("scroll_bar");
 objDiv.scrollTop = - objDiv.scrollHeight;
 
+$(document).ready(function () {
+  // line height in 'px'
+  var maxheight=65;
+  var showText = 'Развернуть <i class="fas fa-chevron-down"></i>';
+  var hideText = 'Свернуть <i class="fas fa-angle-up"></i>';
+
+  $('.textContainer_Truncate').each(function () {
+    var text = $(this);
+    if (text.height() > maxheight){
+        text.css({ 'overflow': 'hidden','height': maxheight + 'px' });
+
+        var link = $('<a href="#">' + showText + '</a>');
+        var linkDiv = $('<div class="select_btn"></div>');
+        linkDiv.append(link);
+        $(this).after(linkDiv);
+
+        link.click(function (event) {
+          event.preventDefault();
+
+          if (text.height() > maxheight)  {
+              $(this).html(showText);
+              text.css('height', maxheight + 'px');
+          } else {
+              $(this).html(hideText);
+              text.css('height', 'auto');
+          }
+        });
+    }       
+  });
+});
+$(document).ready(function () {
+  // line height in 'px'
+  var maxheight=25;
+  var showText = 'Развернуть <i class="fas fa-chevron-down"></i>';
+  var hideText = 'Свернуть <i class="fas fa-angle-up"></i>';
+
+  $('.textContainer_Truncate1').each(function () {
+    var text = $(this);
+    if (text.height() > maxheight){
+        text.css({ 'overflow': 'hidden','height': maxheight + 'px' });
+
+        var link = $('<a href="#">' + showText + '</a>');
+        var linkDiv = $('<div class="select_btn"></div>');
+        linkDiv.append(link);
+        $(this).after(linkDiv);
+
+        link.click(function (event) {
+          event.preventDefault();
+
+          if (text.height() > maxheight)  {
+              $(this).html(showText);
+              text.css('height', maxheight + 'px');
+          } else {
+              $(this).html(hideText);
+              text.css('height', 'auto');
+          }
+        });
+    }       
+  });
+});
 
   

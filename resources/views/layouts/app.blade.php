@@ -84,14 +84,14 @@
                     <div class="menu_styles_block">
                         <div class="menu_styles_dropdown">
                             <button onclick="menuStyles()" class="menu_styles_btn"><i class="fas fa-cog"></i></button>
-                            <div id="menuStyles" class="dropdown-content">
+                            <div id="menuStyles" class="dropdown-content menu_drp">
                              <div class="menu_styles_item_block">
                                 
                                 <div class="menu_styles_item">
                                     <span>Шрифт</span> 
                                     <div class="menu_styles_item_btns">
                                         <button id="fontDecrem" class="button_style">-</button>
-                                        <button id="fontCurrent"  class="button_style">0</button>
+                                        <div id="fontCurrent"  class="display_style_block">0</div>
                                         <button id="fontIncrem"  class="button_style">+</button>
                                     </div>   
                                 </div>
@@ -99,8 +99,15 @@
                                     <span>Высота строк</span> 
                                     <div class="menu_styles_item_btns">
                                         <button id="lhDecrem" class="button_style">-</button>
-                                        <button id="lhCurrent"  class="button_style">0</button>
+                                        <div id="lhCurrent"  class="display_style_block">0</div>
                                         <button id="lhIncrem"  class="button_style">+</button>
+                                    </div>   
+                                </div>
+                                <div class="menu_styles_item">
+                                    <span>Сбросить настройки</span> 
+                                    <div class="menu_styles_item_btns">
+                                        <button id="clearLS" class="button_style">X</button>
+                                      
                                     </div>   
                                 </div>
                             </div>

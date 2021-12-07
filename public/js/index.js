@@ -57,15 +57,16 @@ function menuStyles() {
 size=14;
 
 
-$("#fontIncrem").on("click",function(){
-  console.log
-  size=size+1;
-   $("reader_container").css("font-size",size + "px");
-   
-  //  
-});
+$("#fontIncrem").click(function() {
+  
+  var textBoxes = $('.reader_container_text');
+   fontSize++;
+   textBoxes.css("font-size", fontSize);
+   localStorage.setItem('fontSize', fontSize)
+   $("#fontCurrent").text(fontSize);
+ });
 localFontSize = localStorage.getItem('fontSize')
-localLineHeight = localStorage.getItem('line-height')
+localLineHeight = localStorage.getItem('lineHeight')
 if(typeof(localFontSize) != "undefined" && localFontSize !== null) {
   fontSize = localFontSize;
   
@@ -74,22 +75,33 @@ if(typeof(localFontSize) != "undefined" && localFontSize !== null) {
 }else {
   fontSize = 14;
   $("#fontCurrent").text(fontSize);
-  textBoxes.css("font-size", fontSize);
+  
 }
 if(typeof(localLineHeight) != "undefined" && localLineHeight !== null) {
   lineHeight = localLineHeight;
   
-  $("#lhCurrent").text(lineHeight);
+  $("#lhCurrent").text(lineHeight / 10);
   
 }else {
-  lineHeight = 1.8;
-  $("#lhCurrent").text(lineHeight);
+  lineHeight = 18;
+  $("#lhCurrent").text(lineHeight / 10);
   
 }
 $('.reader_container_text').css({fontSize: fontSize+'px'});
-$('.reader_container_text').css({lineHeight: lineHeight});
+$('.reader_container_text').css({lineHeight: lineHeight / 10});
 
-
+$("#clearLS").click(function(){
+  localStorage.clear();
+  var textBoxes = $('.reader_container_text');
+  lineHeight = 18;
+  fontSize = 14;
+  textBoxes.css("font-size", fontSize);
+  $("#fontCurrent").text(fontSize);
+  textBoxes.css("line-height", lineHeight / 10);
+  $("#lhCurrent").text(lineHeight / 10);
+  
+  
+})
 $("#fontDecrem").click(function() {
   
   var textBoxes = $('.reader_container_text');
@@ -99,29 +111,25 @@ $("#fontDecrem").click(function() {
    $("#fontCurrent").text(fontSize);
  });
 $("#lhDecrem").click(function() {
-  $("#lhCurrent").text(lineHeight);
   var textBoxes = $('.reader_container_text');
-   lineHeight -= 0.1;
-   textBoxes.css("line-height", lineHeight);
-   localStorage.setItem('lineHeight', lineHeight)
-   console.log(lineHeight)
- });
-$("#lhIncrem").click(function() {
-  $("#lhCurrent").text(lineHeight);
-  var textBoxes = $('.reader_container_text');
-   lineHeight +=  0.1;
-   textBoxes.css("line-height", lineHeight);
-   localStorage.setItem('lineHeight', lineHeight)
-   console.log(lineHeight)
- });
- 
-// $("#fontDecrem").on("click",function(){
+  lineHeight--;
   
-//   var textBoxes = $('.');
-//    var fontSize = getCurrentFontSize(textBoxes);
-//     textBoxes.css("font-size", fontSize - 1);
-   
-// });
+  textBoxes.css("line-height", lineHeight / 10);
+  localStorage.setItem('lineHeight', lineHeight);
+  console.log(lineHeight / 10 );
+  $("#lhCurrent").text(lineHeight / 10);
+ });
+
+ $("#lhIncrem").click(function() {
+  var textBoxes = $('.reader_container_text');
+  lineHeight++;
+  textBoxes.css("line-height", lineHeight / 10);
+  localStorage.setItem('lineHeight', lineHeight);
+  console.log(lineHeight / 10 );
+  $("#lhCurrent").text(lineHeight / 10);
+ });
+
+
 
 
 

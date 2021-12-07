@@ -976,8 +976,13 @@ body{
   text-align: justify;
   line-height: 1.8;
 }
+.reader_container_text{
+  flex-wrap: wrap;
+  word-wrap:break-word;
+}
 #reader_container {
   font-size: 14px;
+  flex-wrap: wrap;
 }
 .reader_container h2 {
   margin-bottom: 10px;
@@ -1483,22 +1488,60 @@ color:#fd961f;
   display: inline-block;
   padding: 10px;
 }
+.menu_drp {
+  background-color:#2a2a2a;
+  min-width: 350px;
+}
 .menu_styles_item_block {
-  color: #3498DB;
-  margin-left: 30px;
+  color: #b8b6b6;
+  margin-left: 10px;
+  padding: 10px;
+  
+}
+.button_style  {
+  
+  
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 2px solid rgb(8, 149, 230);
+}
+
+.button_style:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+.display_style_block{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  
+}
+.menu_styles_item span {
   padding-top: 10px;
-  padding-bottom: 10px;
+  
 }
 .menu_styles_item {
   display: flex;
+  display: flex;
+  justify-content: space-between;
+  
 }
 .menu_styles_item_btns {
   display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  min-width: 150px;
   margin-left: 10px;
+  padding: 10px;
+  background-color:#1d1d1d;
+  border-radius: 15px;
 }
 .menu_styles_item_btns button{
   color: #b8b6b6;
   font-weight: bold;
+  
   font-size: 18px;
 }
 

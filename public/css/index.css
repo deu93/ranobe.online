@@ -616,6 +616,7 @@ body{
   background-color: #1d1d1d;
   border-radius: 10px;
   min-height: 250px;
+  max-height: 550px;
   display: flex;
   flex-direction: column-reverse;
   overflow: scroll;

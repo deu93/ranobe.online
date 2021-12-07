@@ -17,9 +17,9 @@
             </div>
         </div>
     </div>
+    @if (isset($search_results))
     <div class="search_result">
         <div class="result">
-            @if (isset($search_results))
             @foreach ($search_results as $book)
             <div class="middle_column_content">
                 <div class="left_content">
@@ -85,9 +85,9 @@
                 {{ $search_results->links('vendor.pagination.custom') }}
                 @endif
             </div>
-            @endif
         </div>
     </div>
+    @endif
     
 </div>
 <div class="mobile">

@@ -10,8 +10,8 @@ class ChaptersPanelController extends Controller
 {
     public function index($slug) {
         $book = Book::where('slug', $slug)->first();
-        $chapters = Chapter::where('book_id', $book->id)->paginate(20);
-
+        $chapters = Chapter::orderBy('created_at', 'desc')->where('book_id', $book->id)->get();
+        
         return view('chapters-panel', [
             'book' => $book,
             'chapters' => $chapters

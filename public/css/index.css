@@ -1114,12 +1114,23 @@ body{
 }
 .table_block{
   width: 840px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  
 }
 .table_block_border {
   margin-left: 65px;
+}
+.table_block_scroll {
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  min-height: 250px;
+  max-height: 550px;
+  
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.table_block_scroll_data {
+  display: flex;
+  
 }
 
 

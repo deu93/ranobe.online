@@ -1101,6 +1101,9 @@ body{
 }
 .moderate_block table{
  min-width: 400px;
+ margin-left: 20px;
+ margin-bottom: 10px;
+ margin-top: 5px;
  text-align: center;
  
 }
@@ -1124,14 +1127,11 @@ body{
   border-radius: 10px;
   min-height: 250px;
   max-height: 550px;
-  
+  border: 3px solid  rgba(167, 166, 166, 0.226);
   overflow: scroll;
   overflow-x: hidden;
 }
-.table_block_scroll_data {
-  display: flex;
-  
-}
+
 
 
 .moderate_block{

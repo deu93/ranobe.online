@@ -25,6 +25,9 @@
                     <h3>Нет глав</h3>
                 </div>
                 @endif
+                <div class="book_add">
+                    <a href="{{ url('/add-chapter/'. $book->slug) }}">Добавить главу</a>
+                </div>
                 <div class="book_links">
                     @if ($chapters->links('vendor.pagination.custom'))
                     {{ $chapters->links('vendor.pagination.custom') }}

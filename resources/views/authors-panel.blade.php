@@ -23,10 +23,11 @@
                                     $shortTitle = Str::limit($book->title, 20, '...')
                                 @endphp
                                 <h5><a class="book_show_a" href="{{ url('/book/'.$book->slug) }}">{{ $shortTitle }}</h5></a>
-                                <img src="{{ asset('img/books/' . $book->image) }}" alt="kartinka">
+                                <a href="{{ url('/book/'.$book->slug) }}"><img src="{{ asset('img/books/' . $book->image) }}" alt="kartinka"></a>
+                                
                                 <div class="book_link_block">
                                     <a href="{{ url('/edit-book', $book->slug) }}">Редактировать</a>
-                                    <a href="{{ url('/add-chapter/'. $book->slug) }}">Добавить главу</a>
+                                    <a href="{{ '/chapters-panel/'. $book->slug}}">Панель глав</a>
                                     <a  href="{{ url('/delete-book/'. $book->slug) }}">Удалить книгу</a>
                                 </div>
                             </div>

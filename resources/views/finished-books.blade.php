@@ -80,7 +80,8 @@
     </div>
     <div class="mobile">
         <div id="content" class="view_change_style standart">
-            @foreach ($shuffled as $book)
+            @if ($books->count())
+              @foreach ($shuffled as $book)
             
             <div class="middle_column_content">
                 <div class="left_content">
@@ -131,6 +132,12 @@
                 </div>
             </div>
             @endforeach
+            @else
+            <div class="no_finished">
+                <h3 class="">Нет законченных книг</h3>
+            </div>  
+            @endif
+            
             <div class="book_links">
                 @if ($books->links('vendor.pagination.custom'))
                 {{ $books->links('vendor.pagination.custom') }}

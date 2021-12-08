@@ -144,6 +144,19 @@
             @if($book->chapter->count())
             <a class="left_content_link description_link" href="{{ url('/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
             @endif
+            @auth
+            @if ((auth()->user()->role == 2 and $book->user_id == auth()->user()->id) or auth()->user()->role > 3)
+            <div class="tlp">
+                <a class="" href="{{ '/edit-book/'. $book->slug }}">Редактировать книгу</a>
+            </div>
+            <div class="tlp1">
+                <a class="" href="{{  '/chapters-panel/'. $book->slug}}">Панель глав</a>
+            </div>
+            <div class="tlp2">
+                <a class="" href="{{ '/book-delete/'. $book->slug }}">Удалить книгу</a>
+            </div>
+            @endif
+        @endauth
              <div class="description_content">
                 <div class="content_right_block">
                     <div class="svg_bg">

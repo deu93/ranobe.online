@@ -20,7 +20,7 @@
                             @foreach ($books as $book)
                             <div class="book_show">
                                 @php
-                                    $shortTitle = Str::limit($book->title, 20, '...')
+                                    $shortTitle = Str::limit($book->title, 15, '...')
                                 @endphp
                                 <h5><a class="book_show_a" href="{{ url('/book/'.$book->slug) }}">{{ $shortTitle }}</h5></a>
                                 <a href="{{ url('/book/'.$book->slug) }}"><img src="{{ asset('img/books/' . $book->image) }}" alt="kartinka"></a>
@@ -46,4 +46,5 @@
     </div>
     
 </div>
+
 @endsection

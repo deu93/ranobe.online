@@ -1360,6 +1360,9 @@ color:#fd961f;
   margin-top: 25px;
   margin-left: 10px;
 }
+.description_title a {
+  color:#d3d3d3;
+}
 
 .authors_panel {
   width: 850px;

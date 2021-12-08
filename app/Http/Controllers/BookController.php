@@ -9,6 +9,7 @@ use App\Models\BookGenre;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class BookController extends Controller
 {
@@ -61,10 +62,18 @@ class BookController extends Controller
             ]);
 
             if($request->hasFile('image')){
+
+
+                $path = 'img/books/' . $book->image;
+                if(File::exists($path)) {
+                    File::delete($path);
+                }
+
+
                 $file = $request->file('image');
                 $ext = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $file->extension();
-                $file->move('img', $filename);
+                $file->move('img/books', $filename);
                 $book->image = $filename;
                 
             }
@@ -118,6 +127,16 @@ class BookController extends Controller
                 
             }
             return redirect('/authors-panel')->with('status', 'Книга обновлена');    
+        }
+    }
+
+    public function destroy($slug){
+        $book = Book::where('slug', $slug)->first();
+        if ((auth()->user()->role == 2 and auth()->user()->id == $book->user_id) or auth()->user()->role > 3) {
+            $book->delete();
+            return redirect('/')->with('status', 'Книга удалена');
+        } else {
+            return abort(404);
         }
     }
 }

@@ -14,7 +14,7 @@
                     </a>
                     <div class="last_chapter">
                             @if ($book->chapter->last())
-                                <a href="{{ url('/'.$book->slug.'/'.$book->chapter->last()->slug) }}">
+                                <a href="{{ url('/reader/'.$book->slug.'/'.$book->chapter->last()->slug) }}">
                             <h4>
                                 
                             @if ($book->chapter->last())

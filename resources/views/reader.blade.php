@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('titles')
+<h2 class="description_title">{{ $book->title }}</h2>
+@endsection
 @section('content')
 <div class="reader_page">
     <div class="reader_block">

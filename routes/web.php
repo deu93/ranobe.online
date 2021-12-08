@@ -16,6 +16,7 @@ use App\Http\Controllers\AdminPanelController;
 use App\Http\Controllers\BookDislikeController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\AuthorsPanelController;
+use App\Http\Controllers\ChaptersPanelController;
 use App\Http\Controllers\FinishedBooksController;
 
 /*
@@ -45,8 +46,13 @@ Route::get('/moderate/delete/{id}', [ModerateController::class, 'delete']);
 Route::get('/authors-panel', [AuthorsPanelController::class, 'index']);
 Route::get('/add-chapter/{slug}', [ChapterController::class, 'index']);
 Route::post('/add-chapter/{slug}', [ChapterController::class, 'store']);
-Route::get('/{slug}/{chapter_slug}', [ReaderController::class, 'index']);
+Route::get('/reader/{slug}/{chapter_slug}', [ReaderController::class, 'index']);
 Route::get('/admin-panel', [AdminPanelController::class, 'index']);
+Route::get('/chapters-panel/{slug}', [ChaptersPanelController::class, 'index']);
+Route::get('/edit-chapter/{id}', [ChapterController::class, 'edit']);
+Route::put('/edit-chapter/{id}', [ChapterController::class, 'update']);
+Route::get('/delete-chapter/{id}', [ChapterController::class, 'destroy']);
+Route::get('/book-delete/{slug}', [BookController::class, 'destroy']);
 Route::post('/add-genre', [AdminPanelController::class, 'store']);
 Route::post('/book/{book}/likes', [BookLikeController::class, 'like'])->name('book.likes');
 Route::post('/book/{book}/dislikes', [BookLikeController::class, 'dislike'])->name('book.dislikes');

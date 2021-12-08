@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('titles')
+<h2 class="description_title">{{ $book->title }}</h2>
+@endsection
 @section('content')
 <div class="add_book_page">
     <div class="add_chapter_block">

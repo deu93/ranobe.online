@@ -567,7 +567,7 @@ body{
 }
 
 .chapters-title{
-  width: 450px;
+  width: 520px;
 }
 .content_left_link {
   text-decoration: none;
@@ -1113,23 +1113,22 @@ body{
   font-size: 25px;
 }
 .table_block{
-  width: 100%;
+  width: 840px;
   display: flex;
   justify-content: center;
-  
+  flex-direction: column;
 }
 .table_block_border {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-left: 65px;
 }
+
 
 .moderate_block{
   color: #8d8c8c;
 }
 .moderate_block h2{
 padding-bottom: 20px;
-margin-left: 80px;
+margin-left: 190px;
 color:#fd961f;
 }
 .add_book_page {

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titles')
-<a href="{{ url('/book/' . $book->slug) }}"><h2 class="description_title">{{ $book->title }}</h2></a>
+<h2 class="description_title"><a href="{{ url('/book/' . $book->slug) }}">{{ $book->title }}</a></h2>
 @endsection
 @section('content')
 <div class="add_book_page">

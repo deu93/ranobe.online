@@ -29,18 +29,19 @@ class BookController extends Controller
         ->select('book_genres.*', 'genres.genres_name', 'genres.id')
         ->get();
         
-        if(!$books->count()) {
-            $books = DB::table('book_genres')
-            ->join('genres', 'book_genres.genres_id', '=' , 'genres.id')
-            ->join('books', 'book_genres.book_id', '=' , 'books.id')
-            
-            ->select('book_genres.*', 'genres.genres_name', 'genres.id')
-            ->get();
-            foreach($books as $book1) {
-                $book1->genre_added = 0;
+        if($books->count() == 0) {
+            $genres = Genre::all();
+            foreach($genres as $genre){
+                $bookGenre = new BookGenre();
+                $bookGenre->book_id = $book->id;
+                $bookGenre->genres_id = $genre->id;
+                $id = $genre->id;
+                $bookGenre->genre_added = '0';
+                $bookGenre->save();
             }
-            
+         
         }
+        
         
         
         if((auth()->user()->role > 1 and auth()->user()->id = $book->user_id) or auth()->user()->role > 3) {

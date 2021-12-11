@@ -147,7 +147,7 @@
             
             <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
             @if($book->chapter->count())
-            <a class="left_content_link description_link" href="{{ url('/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
+            <a class="left_content_link description_link" href="{{ url('/reader/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
             @endif
             @auth
             @if ((auth()->user()->role == 2 and $book->user_id == auth()->user()->id) or auth()->user()->role > 3)

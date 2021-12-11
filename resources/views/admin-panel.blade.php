@@ -12,6 +12,7 @@
                 <button type="submit">Добавить</button>
             </div>
         </form>
+        
     </div>
     
 </div>

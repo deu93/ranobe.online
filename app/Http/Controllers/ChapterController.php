@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
 use App\Models\Book;
 use App\Models\Chapter;
-use DateTime;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ChapterController extends Controller
 {
@@ -37,7 +38,7 @@ class ChapterController extends Controller
 
             $book = Book::where('slug', $slug)->first();;
             $chapter = new Chapter();
-
+            dd($request->chapter_text);
             $chapter->chapter_name = $request->chapter_name;
             $chapter->chapter_text = $request->chapter_text;
             $chapter->book_id = $book->id;
@@ -89,5 +90,57 @@ class ChapterController extends Controller
             return abort(404);
         }
         
+    }
+
+    public function multiIndex($slug){
+        $book = Book::where('slug', $slug)->first();
+        return view('add-chapters', [
+            'book' => $book
+        ]);
+    }
+
+    public function multiStore(Request $request, $slug) {
+        $this->validate($request, [
+            'file' => 'required',
+            
+        ]);
+       
+        if(auth()->user()->role == 5) {
+            
+            if($request->hasFile('file')){
+                $file = $request->file('file');
+                
+                $filename = time() . '.' . $file->extension();
+                $file->move('files/chapters', $filename);
+                
+            }
+            $json_chapters = json_decode(file_get_contents('files/chapters/'.$filename), true);
+            
+            $book = Book::where('slug', $slug)->first();;
+            $count = 0;
+            foreach($json_chapters as $item) {
+                $chapter = new Chapter();
+                $ptd = $item['text'];
+                $text =  substr($ptd,1,-1);
+                $count += 1; 
+                
+                
+                $chapter->chapter_name = $item['title'];
+                $chapter->chapter_text = $text;  
+                $chapter->book_id = $book->id;
+                $chapter->slug = Str::slug($item['title'],'-');
+                $chapter->created_at = new DateTime('+'.$count.' seconds');
+                $chapter->updated_at = new DateTime('+'.$count.' seconds');
+                $chapter->save();
+            }
+            $path = 'files/chapters/' . $filename;
+                if(File::exists($path)) {
+                    File::delete($path);
+                }
+
+            $book->updated_at = new DateTime();
+            $book->update();
+            return redirect()->back()->with('status', 'Главы успешно добавлены');
+         }
     }
 }

@@ -46,6 +46,8 @@ Route::get('/moderate/delete/{id}', [ModerateController::class, 'delete']);
 Route::get('/authors-panel', [AuthorsPanelController::class, 'index']);
 Route::get('/add-chapter/{slug}', [ChapterController::class, 'index']);
 Route::post('/add-chapter/{slug}', [ChapterController::class, 'store']);
+Route::get('/add-chapters/{slug}', [ChapterController::class, 'multiIndex']);
+Route::post('/add-chapters/{slug}', [ChapterController::class, 'multiStore']);
 Route::get('/reader/{slug}/{chapter_slug}', [ReaderController::class, 'index']);
 Route::get('/admin-panel', [AdminPanelController::class, 'index']);
 Route::get('/chapters-panel/{slug}', [ChaptersPanelController::class, 'index']);

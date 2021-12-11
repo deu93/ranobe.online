@@ -8,6 +8,7 @@
                     <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
                     <a class="left_content_link" href="{{ url('/book/' . $book->slug) }}">Читать</a>
                 </div>
+        
                 <div class="right_content">
                     <a href="{{ url('/book/' . $book->slug) }}">
                         <h2>{{ $book->title }}</h2>

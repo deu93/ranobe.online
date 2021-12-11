@@ -127,47 +127,49 @@
             
                 
                 <div class="left_side_content">
-                    <div class="view_button">
-                        @yield('titles')
-                    </div>
-                    <div class="view">
-                        @yield('content')
+                    <div class="vbt">
+                        <div class="view_button">
+                            @yield('titles')
+                        </div>
+                        <div class="view">
+                            @yield('content')
+                        </div>
                     </div>
                     
                 </div>
 
+                
                 <div class="right_side">
                     <div class="ads">
+                        @yield('ads')
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+             <div class="footer_left_side">
+                 <div class="footer_links">
+                 <a href="">Политика возврата</a>
+                 <a href="">Обратная связь</a>
+                 <a href="">Пользовательское соглашение</a>
+             </div>
+             <div class="footer_social">
+                 <div class="copyright">
+                     <p>
+                         © 2021 Ранобэ.онлайн
+                     </p>
+                 </div>
+                 <div class="social_links">
+                     <a href="#"><i class="fab fa-discord"></i></a>
+                     <a href="#"><i class="fab fa-vk"></i></a>
+                     <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                 </div>
+             </div>
+             </div>
+             <div class="footer_right_side">
 
-                    </div>
-                </div>
-                
-               </div>
-               <div class="footer">
-                <div class="footer_left_side">
-                    <div class="footer_links">
-                    <a href="">Политика возврата</a>
-                    <a href="">Обратная связь</a>
-                    <a href="">Пользовательское соглашение</a>
-                </div>
-                <div class="footer_social">
-                    <div class="copyright">
-                        <p>
-                            © 2021 Ранобэ.онлайн
-                        </p>
-                    </div>
-                    <div class="social_links">
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
-                </div>
-                </div>
-                <div class="footer_right_side">
-
-                </div>
-                
-           </div>
+             </div>
+             
+            </div>
         </div>
         
       

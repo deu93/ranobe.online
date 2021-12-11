@@ -22,6 +22,11 @@
                 <a class="" href="{{ '/book-delete/'. $book->slug }}">Удалить книгу</a>
             </div>
             @endif
+           @if (auth()->user()->role == 5)
+           <div class="tlp3">
+            <a class="" href="{{  '/add-chapters/'. $book->slug}}">Панель добавления</a>
+        </div>
+           @endif
         @endauth
     </div>
 

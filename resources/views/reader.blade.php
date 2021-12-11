@@ -11,13 +11,13 @@
                 @php
                 $menu = 1;
                 echo $chapter->chapter_text;
-            @endphp
+                @endphp
             </div>
         </div>
 
         <div class="reader_links">
             @if ($prev)
-                <a href="{{ url('/'. $book->slug. '/'. $prev->slug ) }}">Предыдущая</a>
+                <a href="{{ url('/reader/'. $book->slug. '/'. $prev->slug ) }}">Предыдущая</a>
             @else
             <div class="block_displ">
                 
@@ -25,7 +25,7 @@
             @endif
             <a href="{{ url('/book/'. $book->slug) }}">Оглавление</a>
             @if ($next)
-            <a href="{{ url('/'. $book->slug. '/'. $next->slug ) }}">Следующая</a>
+            <a href="{{ url('/reader/'. $book->slug. '/'. $next->slug ) }}">Следующая</a>
             @else
             <div class="block_displ">
                 &nbsp;

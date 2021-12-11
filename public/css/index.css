@@ -123,9 +123,12 @@ body{
   padding-bottom: 20px;
   padding-top: 20px;
 }
-
-.left_side_content  {
+.vbt{
   border:1px solid  rgba(167, 166, 166, 0.226);
+}
+.left_side_content  {
+  display: flex;
+ 
   
 }
 .inner_content{
@@ -143,9 +146,9 @@ body{
   background-color: #fb8c00;
 }
 .content {
-  
+  width: 1000px;
   text-decoration: none;
-  display: flex;
+  
   
 }
 .middle_column {
@@ -348,8 +351,7 @@ body{
 .right_side {
   width: 150px;
   background-color: #2a2a2a;
-  
-  
+
 }
 
 
@@ -543,9 +545,29 @@ body{
   color: black;
   border: 2px solid rgb(170, 3, 12);
 }
+.tlp3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  
+}
+.add_chapters_h2 h2{
+  margin-left: 0px;
+}
+.tlp3 a {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 25px;
+  width: 220px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+.tlp3 a:hover {
+  background-color: rgb(170, 3, 12);
+  color: black;
+  border: 2px solid rgb(170, 3, 12);
+}
 .tlp1 {
   margin-top: 15px;
-  
 }
 .tlp1 a {
   text-decoration: none;
@@ -1037,10 +1059,7 @@ body{
   flex-wrap: wrap;
   word-wrap:break-word;
 }
-#reader_container {
-  font-size: 14px;
-  flex-wrap: wrap;
-}
+
 .reader_container h2 {
   margin-bottom: 10px;
   display: flex;
@@ -1162,6 +1181,14 @@ color:#fd961f;
 .add_chapter_block{
   color:#000000
 }
+.add_chapter_block1 h2{
+  padding-bottom: 20px;
+  margin-left: 60px;
+  color: #FFCB9A;
+}
+.add_chapter_block1{
+  color:#000000
+}
 .input__wrapper {
   width: 100%;
   position: relative;
@@ -1240,6 +1267,19 @@ color:#fd961f;
   cursor: pointer;
 }
 .add_chapter_block button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+.add_chapter_block1 button {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 105px;
+  background-color: #1d1d1d;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+  cursor: pointer;
+}
+.add_chapter_block1 button:hover {
   background-color: rgb(8, 149, 230);
   color: black;
 }
@@ -1329,7 +1369,10 @@ color:#fd961f;
   
   
 }
-
+.add_book_item_button1 {
+  margin-left: 25px;
+  margin-top: 25px;
+}
 .add_book_item_button {
   margin-left: 75px;
   margin-top: 25px;

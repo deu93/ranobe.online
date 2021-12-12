@@ -10,7 +10,7 @@
             <div id="reader_container" class="reader_container_text">
                 @php
                 $menu = 1;
-                echo $chapter->chapter_text;
+                //echo $chapter->chapter_text;
                 @endphp
             </div>
         </div>
@@ -33,7 +33,6 @@
             @endif
         </div>
     </div>
-
 </div>
 
 @endsection

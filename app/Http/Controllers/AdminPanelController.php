@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Genre;
+use App\Models\UserIp;
 use Illuminate\Http\Request;
 
 class AdminPanelController extends Controller
@@ -13,8 +14,12 @@ class AdminPanelController extends Controller
     }
 
     public function index() {
+        $views = UserIp::all();
+        
         if(auth()->user()->role > 4) {
-            return view('admin-panel');
+            return view('admin-panel', [
+                'views' => $views
+            ]);
         }
         else{
             return abort(404);

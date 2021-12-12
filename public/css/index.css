@@ -635,6 +635,9 @@ body{
   color: #FFCB9A;
   padding-bottom: 3px;
 }
+.block{
+  margin-top: 20px;
+}
 .cont p {
   line-height: 2;
 }

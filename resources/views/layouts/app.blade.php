@@ -61,6 +61,9 @@
                                   @if (auth()->user()->role == 1 or auth()->user()->role > 2 )
                                   <a href="{{ url('/moderate-panel') }}">Панель модерации</a>
                                   @endif
+                                  @if (auth()->user()->role == 5)
+                                  <a href="{{ url('/admin-panel') }}">Панель администратора</a>
+                                  @endif
                                   <form action="{{ url('/logout') }}" method="POST">
                                       @csrf
                                       <div class="logout_btn">

@@ -12,7 +12,12 @@
                 <button type="submit">Добавить</button>
             </div>
         </form>
-        
+        <div class="block">
+            <h2>Всего просмотров — {{ $views->count() }}</h2>
+        </div>
+            
+            
+        </div>
     </div>
     
 </div>

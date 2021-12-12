@@ -63,4 +63,3 @@ Route::get('/all-books', [AllBooksController::class, 'index']);
 Route::get('/finished-books', [FinishedBooksController::class, 'index']);
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search']);
-Route::get('/debil/{id}', [PController::class, 'index']);

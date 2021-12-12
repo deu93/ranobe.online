@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 
 class PController extends Controller
 {
-    public function index() {
-        $debil = Chapter::where('book_id', 27)->get();
+    public function index($id) {
+        $debil = Chapter::where('book_id', $id)->get();
         foreach ($debil as $debilchik) {
-            $debilchik->chapter_text .= ">" ;
+            $debilchik->chapter_text .= ">";
+            $debilchik->update();
         }
     }
 }

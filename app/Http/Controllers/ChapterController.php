@@ -122,7 +122,7 @@ class ChapterController extends Controller
                 $chapter = new Chapter();
                 $ptd = $item['text'];
                 $text =  $ptd;
-                dd($text);
+                
                 $count += 1; 
                 
                 

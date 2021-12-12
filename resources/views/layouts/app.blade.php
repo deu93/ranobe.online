@@ -159,18 +159,18 @@
                     <a href="/">Обратная связь</a>
                     <a href="/">Пользовательское соглашение</a>
                 </div>
-            <div class="footer_social">
-                <div class="copyright">
-                    <p>
-                        © 2021 Ранобэ.онлайн
-                    </p>
+                <div class="footer_social">
+                    <div class="copyright">
+                        <p>
+                            © 2021 Ранобэ.онлайн
+                        </p>
+                    </div>
+                    <div class="social_links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
                 </div>
-                <div class="social_links">
-                    <a href="#"><i class="fab fa-discord"></i></a>
-                    <a href="#"><i class="fab fa-vk"></i></a>
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-            </div>
             </div>
             <div class="footer_right_side">
 

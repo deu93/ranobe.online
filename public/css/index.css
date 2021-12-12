@@ -125,7 +125,7 @@ body{
 }
 .vbt{
   border:1px solid  rgba(167, 166, 166, 0.226);
-  width: 850px;
+  
 }
 .left_side_content  {
   display: flex;
@@ -137,7 +137,8 @@ body{
 }
 .view_button {
   display: flex;
-  height: 80px;
+  width: 850px;
+  min-height: 80px;
   justify-content: start;
   
   border-bottom:1px solid  rgba(167, 166, 166, 0.226);

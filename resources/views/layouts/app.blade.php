@@ -145,7 +145,6 @@
                     
                     
                 </div>
-                
             </div>
             <div class="right_side">
                 <div class="ads">
@@ -178,9 +177,6 @@
             </div>
             
         </div>
-        
-      
-    
     </div>
 </section>
 <script

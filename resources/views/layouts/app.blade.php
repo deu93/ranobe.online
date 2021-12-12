@@ -76,7 +76,7 @@
                                 </div>
                               </div>
                         </div>
-                        </div>
+                    </div>
                     
                         @if(!isset($menu))
                     <div class="search">
@@ -156,10 +156,10 @@
         <div class="footer">
             <div class="footer_left_side">
                 <div class="footer_links">
-                <a href="">Политика возврата</a>
-                <a href="">Обратная связь</a>
-                <a href="">Пользовательское соглашение</a>
-            </div>
+                    <a href="/">Политика возврата</a>
+                    <a href="/">Обратная связь</a>
+                    <a href="/">Пользовательское соглашение</a>
+                </div>
             <div class="footer_social">
                 <div class="copyright">
                     <p>
@@ -180,7 +180,7 @@
         </div>
         
       
-       
+    
     </div>
 </section>
 <script

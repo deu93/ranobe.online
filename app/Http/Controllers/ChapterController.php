@@ -121,7 +121,8 @@ class ChapterController extends Controller
             foreach($json_chapters as $item) {
                 $chapter = new Chapter();
                 $ptd = $item['text'];
-                $text =  substr($ptd,1,-1);
+                $text =  $ptd;
+                dd($text);
                 $count += 1; 
                 
                 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
@@ -62,3 +63,4 @@ Route::get('/all-books', [AllBooksController::class, 'index']);
 Route::get('/finished-books', [FinishedBooksController::class, 'index']);
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search']);
+Route::get('/debil', [PController::class, 'index']);

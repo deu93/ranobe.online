@@ -605,6 +605,9 @@ body{
   background-color: rgb(8, 149, 230);
   color: black;
 }
+.content_right {
+  font-size: 14px;
+}
 .content_right_top {
   display: flex;
 }
@@ -1405,6 +1408,7 @@ color:#fd961f;
   margin-top: 25px;
   margin-left: 10px;
   margin-bottom: 25px;
+  font-size: 16px;
 }
 .description_title a {
   color:#d3d3d3;

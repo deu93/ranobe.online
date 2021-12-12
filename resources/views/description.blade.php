@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('titles')
 <h2 class="description_title">{{ $book->title }}</h2>
+@auth
+    @if (auth()->user()->role == 5)
+    <h3 class="description_title"> Просмотров {{ $book_views->views }}</h3>
+    @endif
+@endauth
 @endsection
 @section('content')
 <div  class="middle_column">
@@ -141,6 +146,7 @@
 <div class="mobile">
     <div class="middle_column_content">
         <div class="left_content">
+            
             <a href="{{ url('/book/' . $book->slug) }}">
                 <h2>{{ $book->title }}</h2>
             </a>
@@ -214,6 +220,7 @@
                     </div>
                 </div>
              </div>
+             
              <div class="content_right_bot">
                 <div class="tab">
                     <button  class="tablinks1" onclick="openCity1(event, 'description1')" id="defaultOpen1">Описание</button>

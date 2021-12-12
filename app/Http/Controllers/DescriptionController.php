@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use App\Models\BookPost;
+use App\Models\UserIp;
 use App\Models\Chapter;
+use App\Models\BookPost;
+use App\Models\BookView;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -33,7 +35,39 @@ class DescriptionController extends Controller
             }
         }
         
+        
+        $visitor_ip = $_SERVER['REMOTE_ADDR'];
+        $visited = UserIp::where('ip_address', $visitor_ip)->where('book_id', $book->id)->first();
+        $book_view = BookView::where('book_id', $book->id)->first();
+        
+        if($visited == null) {
+            $visited = new UserIp();
+            $visited->ip_address = $visitor_ip;
+            $visited->book_id = $book->id;
+            $visited->save();
 
+            
+            if($book_view == null) {
+                $book_view = new BookView();
+                $book_view->book_id = $book->id;
+                $book_view->views = 1;
+                $book_view->save();
+            }
+            else if ($book_view != null){
+                
+                $book_view->views = $book_view->views + 1;
+                
+                $book_view->update();
+            }
+        }
+        
+        
+        
+        
+
+        
+
+        
         $count_posts = BookPost::where('book_id', $book->id)
         ->where('moderated', '1')
         ->get();
@@ -44,7 +78,8 @@ class DescriptionController extends Controller
             'genres' => $genres,
             'posts' => $posts,
             'count_posts' => $count_posts,
-            'arr_gen' => $arr_gen
+            'arr_gen' => $arr_gen,
+            'book_views' => $book_view
         ]);
     }
 

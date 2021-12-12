@@ -128,8 +128,6 @@
             </div>
             <div class="inner_content">
                 <div class="content">
-                
-                    
                     <div class="left_side_content">
                         <div class="vbt">
                             <div class="view_button">
@@ -141,9 +139,6 @@
                         </div>
                         
                     </div>
-    
-                    
-                    
                 </div>
             </div>
             <div class="right_side">
@@ -176,7 +171,7 @@
 
             </div>
             
-        </div>
+        
     </div>
 </section>
 <script

@@ -1998,7 +1998,13 @@ xxl: 1400px */
     margin-left: 0px;
     margin-top: 25px;
   }
-
+  .container_content{
+    width: 360px;
+    display: block;
+  }
+  .footer {
+    margin-left: 0px;
+  }
   .footer_left_side {
     width: 340px;
     
@@ -2097,6 +2103,7 @@ xxl: 1400px */
     margin: 0;
     
   }
+
   
 }
 @media(min-width:576px) and (max-width:767px) {

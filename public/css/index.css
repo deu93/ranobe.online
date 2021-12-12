@@ -635,6 +635,9 @@ body{
   color: #FFCB9A;
   padding-bottom: 3px;
 }
+.cont p {
+  line-height: 2;
+}
 .cont_genres {
   display: flex;
   flex-wrap: wrap;

@@ -3,7 +3,7 @@
 <h2 class="description_title">{{ $book->title }}</h2>
 @endsection
 @section('content')
-<div class="reader_page">
+{{-- <div class="reader_page">
     <div class="reader_block">
         <div  class="reader_container">
             <h2>{{ $chapter->chapter_name }}</h2>
@@ -34,6 +34,6 @@
         </div>
     </div>
 
-</div>
+</div> --}}
 
 @endsection

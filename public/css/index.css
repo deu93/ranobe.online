@@ -1468,9 +1468,7 @@ color:#fd961f;
   justify-content: center;
   margin-bottom: 30px;
 }
-.pager li{
-  margin: 5px;
-}
+
 .book_links {
   display: flex;
   
@@ -1508,7 +1506,7 @@ color:#fd961f;
   
 }
 .pager li {
-  margin: 10px;
+  margin: 5px;
   
 }
 .pagination {

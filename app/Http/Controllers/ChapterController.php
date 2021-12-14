@@ -141,7 +141,7 @@ class ChapterController extends Controller
 
             $book->updated_at = new DateTime();
             $book->update();
-            return redirect()->back()->with('status', 'Главы успешно добавлены');
+            return redirect('/authors-panel')->with('status', 'Главы успешно добавлены');
          }
     }
 }

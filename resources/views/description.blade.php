@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-{{ $book->title }}
+{{ $book->title . " — "}} 
 @endsection
 @section('titles')
 <h2 class="description_title">{{ $book->title }}</h2>

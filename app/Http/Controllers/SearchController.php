@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,7 @@ class SearchController extends Controller
     
 
     public function index() {
+        Carbon::setLocale('ru');
         return view('search');
     }
     public function search(Request $request) {

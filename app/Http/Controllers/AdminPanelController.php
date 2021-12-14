@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Genre;
+use App\Models\UserChapterIp;
 use App\Models\UserIp;
 use Illuminate\Http\Request;
 
@@ -15,10 +16,11 @@ class AdminPanelController extends Controller
 
     public function index() {
         $views = UserIp::all();
-        
+        $views_chapters = UserChapterIp::all();
         if(auth()->user()->role > 4) {
             return view('admin-panel', [
-                'views' => $views
+                'views' => $views,
+                'chapter_views' => $views_chapters
             ]);
         }
         else{

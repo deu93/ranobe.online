@@ -15,6 +15,9 @@
         <div class="block">
             <h2>Всего просмотров — {{ $views->count() }}</h2>
         </div>
+        <div class="block">
+            <h2>Всего просмотров глав — {{ $chapter_views->count() }}</h2>
+        </div>
             
             
     </div>

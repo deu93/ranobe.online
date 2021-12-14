@@ -170,6 +170,7 @@ body{
 }
 .left_content img {
   width: 180px;
+  height: 250px;
 }
 .left_content_img {
   border-radius: 10px;
@@ -1469,6 +1470,7 @@ color:#fd961f;
 }
 .book_links {
   display: flex;
+  width: 800px;
   justify-content: center;
   
   margin-top: 20px;
@@ -1585,6 +1587,10 @@ color:#fd961f;
   overflow:hidden;
   width: 220px;
   margin: 0px 10px;
+}
+.book_show img{
+  width: 220px;
+  height: 305px;
 }
 .book_show_a  {
   color:#f9f9fd

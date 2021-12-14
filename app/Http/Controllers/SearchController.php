@@ -15,7 +15,7 @@ class SearchController extends Controller
         return view('search');
     }
     public function search(Request $request) {
-        
+        Carbon::setLocale('ru');
         $this->validate($request, [
             'search' => 'required|min:3|max:255'
         ]);

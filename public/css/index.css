@@ -1468,9 +1468,12 @@ color:#fd961f;
   justify-content: center;
   margin-bottom: 30px;
 }
+.pager{
+  width: 750px;
+}
 .book_links {
   display: flex;
-  width: 750px;
+  
   justify-content: center;
   
   margin-top: 20px;

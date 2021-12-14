@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+{{ $book->title }}
+@endsection
 @section('titles')
 <h2 class="description_title"><a href="{{ url('/book/' . $book->slug) }}">{{ $book->title }}</a></h2>
 @endsection

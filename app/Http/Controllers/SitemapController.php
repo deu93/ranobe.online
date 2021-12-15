@@ -19,7 +19,7 @@ class SitemapController extends Controller
         ])->header('Content-Type','text/xml');
     }
     public function chapters() {
-        $chapters = Chapter::all();
+        $chapters = Chapter::get();
         return response()->view('sitemap.chapters', [
             'chapters' => $chapters
         ])->header('Content-Type','text/xml');

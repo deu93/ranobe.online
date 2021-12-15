@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\DB;
 class ReaderController extends Controller
 {
     
-    public function index($id, $chapter_slug) {
-        $book = Book::find($id);
+    public function index($slug, $chapter_slug) {
+        $book = Book::where('slug', $slug)->first();
         $chapter = Chapter::where('slug', $chapter_slug)->first();
         
         $next = Chapter::where('book_id', $book->id)
@@ -48,7 +48,7 @@ class ReaderController extends Controller
                 );
         
                 foreach($options as $row) {
-                    if (stripos($_SERVER['HTTP_USER_AGENT'], $row) !== false) {
+                    if (stripos($_SERVER['HTTP_USER_AGENT'], $row) != false) {
                         return true;
                     }
                 }

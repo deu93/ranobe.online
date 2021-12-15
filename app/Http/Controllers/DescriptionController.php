@@ -58,7 +58,7 @@ class DescriptionController extends Controller
                 );
         
                 foreach($options as $row) {
-                    if (stripos($_SERVER['HTTP_USER_AGENT'], $row) !== false) {
+                    if (stripos($_SERVER['HTTP_USER_AGENT'], $row) != false) {
                         return true;
                     }
                 }

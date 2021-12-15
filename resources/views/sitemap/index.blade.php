@@ -2,9 +2,9 @@
  
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
-        <loc>{{ url('/stm/sitemap/books.xml') }}</loc>
+        <loc>{{ url('/stm/sitemap1.xml') }}</loc>
     </sitemap>
     <sitemap>
-        <loc>{{ url('/stm/sitemap/chapters.xml') }}</loc>
+        <loc>{{ url('/stm/sitemap2.xml') }}</loc>
     </sitemap>
 </sitemapindex>

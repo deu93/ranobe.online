@@ -20,7 +20,7 @@ class SitemapController extends Controller
     }
     public function chapters() {
         $chapters = Chapter::all();
-        return response()->view('sitemap.books', [
+        return response()->view('sitemap.chapters', [
             'chapters' => $chapters
         ])->header('Content-Type','text/xml');
     }

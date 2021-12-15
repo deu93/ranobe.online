@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\DB;
 class ReaderController extends Controller
 {
     
-    public function index($book_slug, $chapter_slug) {
-        $book = Book::where('slug', $book_slug)->first();
+    public function index($id, $chapter_slug) {
+        $book = Book::find($id);
         $chapter = Chapter::where('slug', $chapter_slug)->first();
         
         $next = Chapter::where('book_id', $book->id)

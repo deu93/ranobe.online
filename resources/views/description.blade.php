@@ -15,7 +15,7 @@
     <div class="content_left">
         <img src="{{ asset('img/books/' . $book->image) }}" alt="" class="content_left_img">
         @if ($book->chapter->count())
-        <a class="content_left_link" href="{{ '/reader/'. $book->slug . '/'.$book->chapter->first()->slug }}">Начать читать</a>
+        <a class="content_left_link" href="{{ '/reader/'. $book->id . '/'.$book->chapter->first()->slug }}">Начать читать</a>
             
         @endif
         @auth
@@ -156,7 +156,7 @@
             
             <img class="left_content_img" src="{{ asset('img/books/' . $book->image) }}" alt="">
             @if($book->chapter->count())
-            <a class="left_content_link description_link" href="{{ url('/reader/' . $book->slug . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
+            <a class="left_content_link description_link" href="{{ url('/reader/' . $book->id . '/' . $book->chapter->first()->slug) }}">Начать читать</a>
             @endif
             @auth
             @if ((auth()->user()->role == 2 and $book->user_id == auth()->user()->id) or auth()->user()->role > 3)
@@ -255,7 +255,7 @@
            <div id="scroll_bar" class="chapter_block">
            @foreach ($chapters as $chapter )
                <div class="chapter">
-                    <a href="{{url('/reader/'.$book->slug.'/'.$chapter->slug)}}">{{ $chapter->chapter_name }}</a>
+                    <a href="{{url('/reader/'.$book->id.'/'.$chapter->slug)}}">{{ $chapter->chapter_name }}</a>
                 </div>
            @endforeach
             

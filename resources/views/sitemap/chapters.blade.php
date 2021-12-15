@@ -5,7 +5,7 @@
           $book= App\Models\Book::where('id', $chapter->book_id)->first()
         @endphp
         <url>
-            <loc>{{url("/reader/". $book->slug . '/' . $chapter->slug)}}</loc>
+            <loc>{{url("/reader/". $chapter->book_id . '/' . $chapter->slug)}}</loc>
         </url>
     @endforeach
 </urlset>

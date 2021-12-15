@@ -66,6 +66,6 @@ Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search']);
 
 // Sitemap
-Route::get('/stm/sitemap', [SitemapController::class, 'index']); 
+Route::get('/stm/sitemap.xml', [SitemapController::class, 'index']); 
 Route::get('/stm/sitemap/books', [SitemapController::class, 'books']); 
 Route::get('/stm/sitemap/chapters', [SitemapController::class, 'chapters']); 

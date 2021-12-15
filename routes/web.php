@@ -19,6 +19,7 @@ use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\AuthorsPanelController;
 use App\Http\Controllers\ChaptersPanelController;
 use App\Http\Controllers\FinishedBooksController;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,8 @@ Route::get('/all-books', [AllBooksController::class, 'index']);
 Route::get('/finished-books', [FinishedBooksController::class, 'index']);
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search']);
+
+// Sitemap
+Route::get('/stm/sitemap', [SitemapController::class, 'index']); 
+Route::get('/stm/sitemap/books', [SitemapController::class, 'books']); 
+Route::get('/stm/sitemap/chapters', [SitemapController::class, 'chapters']); 

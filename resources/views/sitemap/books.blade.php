@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     @foreach ($books as $book)
         <url>
-            <loc>{{url("/")}}{{ $book->path() }}</loc>
+            <loc>{{url("/book/")}}{{ $book->slug }}</loc>
         </url>
     @endforeach
 </urlset>

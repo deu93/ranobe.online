@@ -14,9 +14,6 @@ class SitemapController extends Controller
 
     public function books() {
         $books = Book::all();
-        foreach ($books as $book){
-            dd($book->path());
-        }
         return response()->view('sitemap.books', [
             'books' => $books
         ])->header('Content-Type','text/xml');

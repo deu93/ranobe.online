@@ -115,6 +115,14 @@ body{
   margin-top: 14px;
   background-color: #2a2a2a;
 }
+.container_admin {
+  
+  border-radius: 10px;
+  width: 1200px;
+  color: rgba(255, 255, 255, 0.787);
+  margin-top: 14px;
+  background-color: #2a2a2a;
+}
 
 
 .view {
@@ -300,6 +308,9 @@ body{
 
 
 .sticky_column {
+  width: 80px;
+}
+.sticky_column_admin {
   width: 80px;
 }
 .logo {
@@ -645,6 +656,9 @@ body{
   display: block;
 }
 .container_content{
+  display: flex;
+}
+.container_content_admin{
   display: flex;
 }
 .cont {

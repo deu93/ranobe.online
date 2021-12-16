@@ -6,11 +6,34 @@
 <h2 class="description_title">{{ $book->title }}</h2>
 @endsection
 @section('content')
-<div class="reader_page">
-    <div class="reader_block">
+@php
+    $admin_block = 'reader_block';
+    $admin_page  = 'reader_page';
+@endphp            
+            
+            
+@auth
+@php
+if(auth()) {
+    if(auth()->user()->role == 5) {
+        $admin_block = 'reader_admin_block';
+        $admin_page = 'reader_admin_page';
+        $admin = 1;
+    }
+}else{
+    
+}
+
+@endphp
+@endauth
+            
+<div class=" {{ $admin_page }}">
+            
+    <div class="{{ $admin_block }}  ">
         <div  class="reader_container">
             <h2>{{ $chapter->chapter_name }}</h2>
-            <div id="reader_container" class="reader_container_text">
+            
+            <div id="reader_container" class="reader_container_text ">
                 @php
                 $menu = 1;
                 echo $chapter->chapter_text;

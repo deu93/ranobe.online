@@ -23,9 +23,27 @@
 </head>
 <body>
 <section>
-    <div class="container">
-        <div class="container_content">
-            <div class="sticky_column">
+    @php
+        if(!isset($admin)){
+                $inner_content = 'inner_content' ;
+                $vbt = 'vbt' ;
+                $view_button = 'view_button';
+                $container = 'container';
+                $container_content = 'container_content';
+                $sticky_column = 'sticky_column';
+            
+            }else{
+                $container = 'container_admin';
+                $container_content = 'container_content_admin';
+                $inner_content = 'inner_content_admin';
+                $vbt = 'vbt_admin';
+                $view_button = 'view_button_admin';
+                $sticky_column = 'sticky_column_admin';
+            } 
+             @endphp
+    <div class="{{ $container }}">
+        <div class="{{ $container_content }}">
+            <div class="{{ $sticky_column }}">
                 <div class="logo">
                     <a href="/"><img src="{{ asset('img/letter_r_PNG93944.png') }}" alt=""></a>
                 </div>
@@ -120,11 +138,20 @@
                     @endif
                 </div>
              </div>
-            <div class="inner_content">
+             
+             @php
+             if(!isset($admin)){
+                 $inner_content = 'inner_content' ;
+                 }else{
+                     $inner_content = 'inner_content_admin';
+                 }
+             @endphp
+            <div class=" {{ $inner_content }}">
                 <div class="content">
                     <div class="left_side_content">
-                        <div class="vbt">
-                            <div class="view_button">
+                        
+                        <div class="{{ $vbt }}">
+                            <div class="{{ $view_button }}">
                                 @yield('titles')
                             </div>
                             <div class="view">
@@ -135,30 +162,32 @@
                     </div>
                 </div>
             </div>
+            @if(!isset($admin))
             <div class="right_side">
                 <div class="ads">
                     @yield('ads')
                 </div>
             </div>
+            @endif
         </div>
         <div class="footer">
             <div class="footer_left_side">
-                <div class="footer_links">
+                {{-- <div class="footer_links">
                     <a href="/">Политика возврата</a>
                     <a href="/">Обратная связь</a>
                     <a href="/">Пользовательское соглашение</a>
-                </div>
+                </div> --}}
                 <div class="footer_social">
                     <div class="copyright">
                         <p>
                             © 2021 Ранобэ.онлайн
                         </p>
                     </div>
-                    <div class="social_links">
+                    {{-- <div class="social_links">
                         <a href="#"><i class="fab fa-discord"></i></a>
                         <a href="#"><i class="fab fa-vk"></i></a>
                         <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="footer_right_side">

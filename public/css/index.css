@@ -118,22 +118,34 @@ body{
 
 
 .view {
-  width: 850px;
+  
   background-color: #1d1d1d; 
   padding-bottom: 20px;
   padding-top: 20px;
 }
 .vbt{
+  width: 850px;
   border:1px solid  rgba(167, 166, 166, 0.226);
   
+}
+.vbt_admin{
+  width: 1100px;
+  border:1px solid  rgba(167, 166, 166, 0.226);
+  border-radius: 15px;
+}
+.view_button_admin {
+
 }
 .left_side_content  {
   display: flex;
  
   
 }
-.inner_content{
-  
+.inner_content {
+  width: 850px;
+}
+.inner_content_admin{
+  width: 1100px;
 }
 .view_button {
   display: flex;
@@ -153,6 +165,7 @@ body{
   
   
 }
+
 .middle_column {
   display: flex;
 }
@@ -592,6 +605,9 @@ body{
   height: 305px;
 }
 
+.reader_admin_block {
+  width: 1000px;
+}
 .chapters-title{
   width: 520px;
 }
@@ -1060,6 +1076,13 @@ body{
   justify-content: center;
   align-items: center;
 }
+.reader_admin_page {
+  width: 1100px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .no_finished {
   display: flex;
   min-height: 350px;
@@ -1069,6 +1092,11 @@ body{
 }
 .reader_block {
   width: 800px;
+  text-align: justify;
+  line-height: 1.8;
+}
+.reader_admin_block {
+  width: 1070px;
   text-align: justify;
   line-height: 1.8;
 }
@@ -1729,6 +1757,23 @@ xxl: 1400px */
   width: 850px;
 }
 @media (max-width:575px) {
+  .inner_content_admin {
+    width: 390px;
+  }
+  .vbt_admin {
+    width: 390px;
+    background-color: #1d1d1d;
+  }
+  .view_button_admin{
+    width: 390px;
+  }
+  .reader_admin_page{
+    width: 390px;
+    
+  }
+  .reader_admin_block {
+    width: 380px;
+  }
   .search_page{
     max-width: 360px;
     min-height: 170px;
@@ -1818,7 +1863,13 @@ xxl: 1400px */
     min-width: 100px;
     
   }
-
+  .container_admin {
+    width: 390px;
+    display: block;
+    border-radius: 0px;
+    margin-top: 0px;
+    color: rgba(255, 255, 255, 0.787);
+  }
   .container{
     width: 360px;
     display: block;
@@ -1849,10 +1900,19 @@ xxl: 1400px */
     display: none;
   }
   .sticky_column {
+    
     display: flex;
     flex-direction: row-reverse;
     height: 50px;
     width: 360px;
+    justify-content: space-between;
+  }
+  .sticky_column_admin {
+    background-color: #1d1d1d;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    width: 390px;
     justify-content: space-between;
   }
   .sticky_column_cont {
@@ -2006,11 +2066,16 @@ xxl: 1400px */
     margin-left: 0px;
     margin-top: 25px;
   }
+  .container_content_admin{
+    width: 390px;
+    display: block;
+  }
   .container_content{
     width: 360px;
     display: block;
   }
   .footer {
+    background-color:#2a2a2a;
     margin-left: 0px;
   }
   .footer_left_side {

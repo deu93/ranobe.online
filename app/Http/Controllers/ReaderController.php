@@ -14,7 +14,7 @@ class ReaderController extends Controller
     
     public function index($slug, $chapter_slug) {
         $book = Book::where('slug', $slug)->first();
-        $chapter = Chapter::where('slug', $chapter_slug)->first();
+        $chapter = Chapter::where('slug', $chapter_slug)->where('book_id', $book->id)->first();
         
         $next = Chapter::where('book_id', $book->id)
         ->where('id', '>', $chapter->id)

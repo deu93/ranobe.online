@@ -35,6 +35,7 @@ class DescriptionController extends Controller
             }
         }
         
+        
         function is_bot()
         {
             if (!empty($_SERVER['HTTP_USER_AGENT'])) {

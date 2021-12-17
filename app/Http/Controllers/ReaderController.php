@@ -82,7 +82,7 @@ class ReaderController extends Controller
                 }
             }
         }
-        dd($chapter);
+        
         return view('reader', [
             'book' => $book,
             'chapter' => $chapter,

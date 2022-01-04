@@ -138,9 +138,11 @@ class BookController extends Controller
 
         if($book->status == '0') {
             $book->status = '1';
+            $book->update();
         }
         else {
             $book->status = '0';
+            $book->update();
         }
         return redirect()->back()->with('status', 'Обновлено');
     }

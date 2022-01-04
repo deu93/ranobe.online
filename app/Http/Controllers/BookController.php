@@ -44,7 +44,7 @@ class BookController extends Controller
         
         
         
-        if((auth()->user()->role > 1 and auth()->user()->id = $book->user_id) or auth()->user()->role > 3) {
+        if((auth()->user()->role > 1 and auth()->user()->id == $book->user_id) or auth()->user()->role > 3) {
 
             return view('edit-book', [
                 'books' => $books,
@@ -56,7 +56,7 @@ class BookController extends Controller
     public function update(Request $request, $slug) {
         $book = Book::where('slug', $slug)->first();
         
-        if((auth()->user()->role > 1 and auth()->user()->id = $book->user_id) or auth()->user()->role > 3) {
+        if((auth()->user()->role > 1 and auth()->user()->id == $book->user_id) or auth()->user()->role > 3) {
             $this->validate($request,[
                 'title' => 'required|max:255',
                 'description' => 'required',
@@ -130,6 +130,28 @@ class BookController extends Controller
             return redirect('/authors-panel')->with('status', 'Книга обновлена');    
         }
     }
+
+    public function statusUpd($slug) {
+        $book = Book::where('slug', $slug)->first();
+
+        if((auth()->user()->role > 1 and auth()->user()->id == $book->user_id) or auth()->user()->role > 3);
+
+        if($book->status == '0') {
+            $book->status = '1';
+        }
+        else {
+            $book->status = '0';
+        }
+        return redirect()->back()->with('status', 'Обновлено');
+    }
+
+    public function delete($slug) {
+        $book = Book::where('slug', $slug)->first();
+        return view('delete-book', [
+            'book' => $book
+        ]);
+    }
+
 
     public function destroy($slug){
         $book = Book::where('slug', $slug)->first();

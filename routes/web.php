@@ -56,7 +56,8 @@ Route::get('/chapters-panel/{slug}', [ChaptersPanelController::class, 'index']);
 Route::get('/edit-chapter/{id}', [ChapterController::class, 'edit']);
 Route::put('/edit-chapter/{id}', [ChapterController::class, 'update']);
 Route::get('/delete-chapter/{id}', [ChapterController::class, 'destroy']);
-Route::get('/book-delete/{slug}', [BookController::class, 'destroy']);
+Route::get('/book-delete/{slug}', [BookController::class, 'delete']);
+Route::post('/book-delete/{slug}', [BookController::class, 'destroy']);
 Route::post('/add-genre', [AdminPanelController::class, 'store']);
 Route::post('/book/{book}/likes', [BookLikeController::class, 'like'])->name('book.likes');
 Route::post('/book/{book}/dislikes', [BookLikeController::class, 'dislike'])->name('book.dislikes');
@@ -64,7 +65,13 @@ Route::get('/all-books', [AllBooksController::class, 'index']);
 Route::get('/finished-books', [FinishedBooksController::class, 'index']);
 Route::get('/search', [SearchController::class, 'index']);
 Route::post('/search', [SearchController::class, 'search']);
+Route::get('/status_change/{slug}', [BookController::class, 'statusUpd']);
+
+
+
+
 
 // Sitemap
 Route::get('/stm/sitemap.xml', [SitemapController::class, 'index']); 
-Route::get('/stm/sitemap1.xml', [SitemapController::class, 'books']); 
+Route::get('/stm/sitemap1.xml', [SitemapController::class, 'books']);
+

@@ -609,6 +609,57 @@ body{
   background-color: rgb(8, 149, 230);
   color: black;
 }
+.tlp4 {
+  margin-top: 15px;
+  
+}
+.tlp4 a {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 49px;
+  width: 220px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+.tlp4 a:hover {
+  background-color: rgb(170, 3, 12);
+  color: black;
+  border: 2px solid rgb(170, 3, 12);
+}
+.tlp5 {
+  margin-top: 15px;
+  
+}
+.tlp5 a {
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 38px;
+  width: 220px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+.tlp5 a:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+}
+.tlp12 {
+  display: flex;
+  justify-content: center;
+}
+.tlp12 button {
+  background-color: transparent;
+  text-decoration: none;
+  color: rgb(8, 149, 230);
+  padding: 6px 38px;
+  width: 220px;
+  border-radius: 5px;
+  border: 2px solid rgb(8, 149, 230);
+}
+.tlp12 button:hover {
+  background-color: rgb(8, 149, 230);
+  color: black;
+  cursor: pointer;
+}
 .content_left_img {
   border-radius: 10px;
   margin-bottom: 20px;

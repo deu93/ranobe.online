@@ -26,15 +26,18 @@
             <div class="tlp1">
                 <a class="" href="{{  '/chapters-panel/'. $book->slug}}">Панель глав</a>
             </div>
-            <div class="tlp2">
+            @if (auth()->user()->role == 5)
+            <div class="tlp3">
+             <a class="" href="{{  '/add-chapters/'. $book->slug}}">Панель добавления</a>
+         </div>
+            <div class="tlp5">
+             <a class="" href="{{  '/status_change/'. $book->slug}}">Книга закончена</a>
+         </div>
+            @endif
+            <div class="tlp4">
                 <a class="" href="{{ '/book-delete/'. $book->slug }}">Удалить книгу</a>
             </div>
             @endif
-           @if (auth()->user()->role == 5)
-           <div class="tlp3">
-            <a class="" href="{{  '/add-chapters/'. $book->slug}}">Панель добавления</a>
-        </div>
-           @endif
         @endauth
     </div>
 
